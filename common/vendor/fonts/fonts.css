@@ -1,0 +1,59 @@
+@font-face {
+  src: url("../../fonts/Circe-Regular.woff2") format("woff2");
+  font-family: "Circe";
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../../fonts/Circe-Bold.woff2") format("woff2");
+  font-family: "Circe";
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../../fonts/circe-extrabold.ttf");
+  font-family: "Circe";
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+@font-face {
+  src: url("../../fonts/CirceRoundedAlt-Regular2.woff2") format("woff2");
+  font-family: "Circe Rounded Alt";
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe Rounded';
+  src: local('Circe Rounded Regular'), local('Circe-Rounded-Regular'),
+  url('../../fonts/CirceRounded-Regular.woff2') format('woff2'),
+  url('../../fonts/CirceRounded-Regular.woff') format('woff'),
+  url('../../fonts/CirceRounded-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../../fonts/Inter-Regular.woff2") format("woff2");
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../../fonts/Roboto-Bold.woff2") format("woff2");
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../../fonts/RobotoCondensed-Regular.woff2") format("woff2");
+  font-family: "Roboto Condensed";
+  font-weight: 500;
+  font-style: normal;
+}

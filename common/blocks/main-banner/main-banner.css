@@ -1,0 +1,149 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.main-banner {
+  width: 100%;
+  max-width: 100%;
+}
+
+.swiper-wrapper {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.main-banner .slider__slide {
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+  height: auto;
+}
+
+.main-banner__content {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 137px 0 153px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-banner__content .box {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  width: calc(100% - 30px);
+}
+
+.main-banner__content .box__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.main-banner__content .box__slider .form_bottom{
+  text-align: center;
+}
+
+.main-banner__title {
+  font-size: 48px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin: 0;
+  /*max-width: 509px;*/
+}
+
+.white{
+    color: var(--default-color);
+}
+
+.main-banner__accent {
+  color: var(--accent-color);
+  display: block;
+}
+
+.main-banner__text {
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 509px;
+}
+
+.main-banner__slider-navigation-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.main-banner__slider-navigation-wrapper .slider-box {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1279px) {
+  .main-banner__content {
+    padding: 87px 0 113px;
+  }
+
+  .main-banner__content .box__slider {
+    gap: 27px;
+  }
+
+  .main-banner__title {
+    font-size: 38px;
+  }
+
+  .main-banner__text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-banner__content {
+    padding: 47px 0 83px;
+  }
+
+  .main-banner.box.box__slider {
+    padding: 0 45px;
+  }
+
+  .main-banner__content .box__slider {
+    gap: 27px;
+  }
+
+  .main-banner__title {
+    font-size: 28px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .main-banner__text {
+    font-size: 16px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .main-banner__button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

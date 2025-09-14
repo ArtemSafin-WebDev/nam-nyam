@@ -1,0 +1,21 @@
+.hits {
+  padding: 60px 0 72px;
+}
+
+.hits__button {
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1279px) {
+  .hits {
+    padding: 45px 0 47px;
+  }
+  
+}
+
+@media screen and (max-width: 767px) {
+  .hits {
+    padding: 30px 0 39px;
+  }
+}

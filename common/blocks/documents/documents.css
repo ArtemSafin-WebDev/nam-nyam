@@ -1,0 +1,90 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.documents__tabs .tab {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background: none;
+  display: block;
+  -webkit-box-pack: unset;
+  -ms-flex-pack: unset;
+  justify-content: unset;
+  -webkit-transition: unset;
+  -o-transition: unset;
+  transition: unset;
+}
+
+.documents__tabs .tab__link {
+  -webkit-transition: .2s ease-in-out all;
+  -o-transition: .2s ease-in-out all;
+  transition: .2s ease-in-out all;
+  border: 1px solid #CBD3D9;
+  border-radius: 40px;
+  padding: 10px 26px;
+  background: var(--default-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  transition: .2s ease-in-out all;
+  cursor: pointer;
+}
+
+.documents__tabs .tab:hover {
+  background: none;
+  color: unset;
+  border: none;
+}
+
+.documents__tabs .tab__link:hover {
+  background: var(--accent-color);
+  color: var(--default-color);
+  border: 1px solid var(--accent-color);
+}
+
+.documents__tabs .tab_active {
+  background: var(--accent-color-second);
+  border: 1px solid var(--accent-color-second);
+  color: var(--default-color);
+  cursor: default;
+}
+
+.documents__tabs .tab_active:hover {
+  opacity: 1;
+  background: var(--accent-color-second);
+  border: 1px solid var(--accent-color-second);
+}
+
+.documents__link {
+  display: block;
+  position: relative;
+}
+
+.documents__image {
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.documents__link::before {
+  content: url(../../images/zoom-in.svg);
+  width: 22px;
+  height: 22px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  display: block;
+  bottom: 5px;
+  right: 5px;
+}

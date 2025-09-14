@@ -1,0 +1,50 @@
+.catalog__box{
+grid-template-areas:
+
+'catalog-left catalog-main catalog-right';
+
+}
+
+.catalog__complex{
+    display: block;
+
+}
+
+.cabinet__complex-favorite-box .catalog__complex{
+    display: flex;
+    flex-direction:column;
+}
+
+.cmpl-slider-box{
+   /* width: calc(100% - 50px);*/
+}
+
+.catalog-left{
+    position: relative;   
+    z-index: 3; 
+    padding-top: 5px;
+}
+.catalog-main{
+    position: relative;    
+    
+}
+.catalog-right{
+    position: relative;   
+    z-index: 3;  
+    padding-top: 5px;
+}
+
+.stick-middle{
+    background: #fff;
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 1279px){
+.catalog__box {
+    -ms-grid-columns: 0 100% 0;
+    grid-template-columns:0 100% 0;
+    grid-template-areas:
+        'catalog-main catalog-main catalog-main';
+    gap: 0;
+}
+}

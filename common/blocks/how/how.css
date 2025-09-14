@@ -1,0 +1,211 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+.how {
+  padding: 70px 0 60px;
+}
+
+.how__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  counter-reset: how__item-counter;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.how__item {
+  padding: 62px 30px 38px;
+  background-color: transparent;
+  border-radius: 12px;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  counter-increment: how__item-counter;
+  position: relative;
+  top: 0;
+}
+
+.how__item:nth-child(1) {
+  z-index: 10;
+
+}
+
+.how__item:nth-child(2) {
+  z-index: 9;
+}
+
+.how__item:nth-child(3) {
+  z-index: 8;
+}
+
+.how__item:nth-child(4) {
+  z-index: 7;
+}
+
+.how__item:nth-child(5) {
+  z-index: 6;
+}
+
+.how__item:nth-child(7) {
+  z-index: 5;
+}
+
+.how__item:nth-child(8) {
+  z-index: 4;
+}
+
+.how__item:nth-child(9) {
+  z-index: 4;
+}
+
+.how__item:nth-child(10) {
+  z-index: 3;
+}
+
+.how__item::after {
+  content: counter(how__item-counter);
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 1;
+  color: var(--default-color);
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.how__item:hover {
+  background-color: var(--accent-color-second);
+  top: -30px;
+}
+
+.how__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+}
+
+.how__item:hover .how__link {
+  opacity: 1;
+}
+
+.how__icon {
+  max-width: 70px;
+  height: auto;
+  display: block;
+  margin-bottom: 35px;
+  z-index: 5;
+}
+
+.how__text {
+  margin: 0;
+  overflow: hidden;
+  visibility: hidden;
+  margin-top: 5px;
+  -webkit-transition: visibility .2s linear;
+  -o-transition: visibility .2s linear;
+  transition: visibility .2s linear;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--default-color);
+  position: absolute;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 30px 38px;
+  left: -30px;
+  right: -30px;
+  -webkit-transform: translateY(50%) scaleY(0);
+  -ms-transform: translateY(50%) scaleY(0);
+  transform: translateY(50%) scaleY(0);
+  background-color: var(--accent-color-second);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  -webkit-transition: 0s all linear;
+  -o-transition: 0s all linear;
+  transition: 0s all linear;
+  z-index: 10;
+}
+
+.how__item:hover .how__text {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(100%) scaleY(1);
+  -ms-transform: translateY(100%) scaleY(1);
+  transform: translateY(100%) scaleY(1);
+  -webkit-transition: .2s transform linear;
+  -o-transition: .2s transform linear;
+  transition: .2s transform linear;
+}
+
+@media screen and (max-width: 1279px) {
+  .how {
+    padding: 51px 0 45px;
+  }
+
+  .how__item {
+    -ms-flex-preferred-size: 33.33%;
+    flex-basis: 33.33%;
+    padding: 62px 13px 38px;
+  }
+
+  .how__item:hover {
+    top: -15px;
+  }
+
+  .how__text {
+    padding: 5px 13px 38px;
+    left: -13px;
+    right: -13px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .how {
+    padding: 41px 0 30px;
+  }
+
+  .how__item {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    padding: 62px 7px 26px;
+  }
+
+  .how__item:hover {
+    top: 0;
+  }
+
+  .how__text {
+    padding: 5px 7px 26px;
+    left: -7px;
+    right: -7px;
+  }
+}

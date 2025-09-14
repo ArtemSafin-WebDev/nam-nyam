@@ -1,0 +1,204 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.tabs-box.ui-widget.ui-widget-content {
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: var(--text-color);
+  font-family: var(--userfont);
+  font-size: var(--regular-text);
+  padding: 0;
+}
+
+.tabs-box.ui-tabs .ui-tabs-nav {
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: var(--text-color);
+  font-family: var(--userfont);
+  font-size: var(--regular-text);
+  padding: 0;
+  font-weight: 400;
+  line-height: var(--lineheight);
+}
+
+.shipment__tabs-box .shipment__tabs.ui-tabs-nav{
+ margin-bottom: 40px;    
+}
+
+.tabs-box .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.tab {
+  border: 1px solid #CBD3D9;
+  border-radius: 40px;
+  padding: 10px 26px;
+  background: var(--default-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: .2s ease-in-out all;
+  -o-transition: .2s ease-in-out all;
+  transition: .2s ease-in-out all;
+}
+
+li.tab{
+    padding-bottom: 8px;
+}
+
+li .tab__link{
+    line-height: 18px;
+}
+
+.tab:hover {
+  background: var(--accent-color);
+  color: var(--default-color);
+  border: 1px solid var(--accent-color);
+}
+
+.tab_active {
+  background: var(--accent-color-second);
+  border: 1px solid var(--accent-color-second);
+}
+
+.tab_active:hover {
+  opacity: 1;
+  background: var(--accent-color-second);
+  border: 1px solid var(--accent-color-second);
+}
+
+.tab__link {
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-color);
+  -webkit-transition: .2s ease-in-out all;
+  -o-transition: .2s ease-in-out all;
+  transition: .2s ease-in-out all;
+}
+
+.tab:hover .tab__link {
+  color: var(--default-color);
+}
+
+.tab_active .tab__link {
+  color: var(--default-color);
+  cursor: default;
+}
+
+.tabs-box.ui-tabs .ui-tabs-nav li {
+  border: 1px solid #CBD3D9;
+  border-radius: 40px;
+  padding: 10px 26px;
+  margin: 0 !important;
+  background: var(--default-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  white-space: normal;
+}
+
+.tabs-box.ui-tabs .ui-tabs-nav li:hover {
+  background: var(--accent-color);
+  color: var(--default-color);
+  border: 1px solid var(--accent-color);
+}
+
+.tabs-box.ui-tabs .ui-tabs-nav li:hover a {
+  color: var(--default-color);
+}
+
+.tabs-box.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  background: var(--accent-color-second);
+  border: 1px solid var(--accent-color-second);
+}
+
+.tabs-box.ui-tabs .ui-tabs-nav li.ui-tabs-active:hover {
+  opacity: 1;
+  background: var(--accent-color-second);
+  border: 1px solid var(--accent-color-second);
+}
+
+.tabs-box.ui-tabs .ui-tabs-anchor {
+  padding: 0;
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.tab__content.ui-tabs-panel {
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: var(--text-color);
+  font-family: var(--userfont);
+  font-size: var(--regular-text);
+  padding: 0;
+}
+
+.tab__content .ui-widget-content {
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: var(--text-color);
+  font-family: var(--userfont);
+  font-size: var(--regular-text);
+  padding: 0;
+}
+
+.tabs-box .ui-helper-clearfix:before,
+.tabs-box .ui-helper-clearfix:after {
+  display: none;
+}
+
+@media screen and (max-width: 1279px) {
+  .tabs-box .tabs {
+    margin-bottom: 22px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tabs-box .tabs {
+    margin-bottom: 18px;
+  }
+}

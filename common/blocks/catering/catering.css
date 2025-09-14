@@ -1,0 +1,90 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.catering__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr var(--gap) 1fr var(--gap) 1fr var(--gap) 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+  grid-auto-rows: auto;
+  margin: 48px 0 40px;
+}
+
+.catering__item {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 12px;
+}
+
+
+.catering__item a{
+  width: 100%;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  padding: 12px 10px;
+  text-decoration: none;
+}
+.catering__item.hidden{
+    display: none;
+}
+
+.catering__link {
+  display: block;
+  margin-top: auto;
+  width: 100%;
+}
+
+.catering__text {
+  display: block;
+  padding: 16px 13px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+}
+
+.catering__button {
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1279px) {
+  .catering__list {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    margin: 35px 0 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .catering__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .catering__button {
+    
+  }
+}
+
+@media screen and (max-width: 474px) {
+  .catering__list {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}

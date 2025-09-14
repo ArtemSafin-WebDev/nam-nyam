@@ -1,0 +1,139 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.slider-box {
+  position: relative;
+}
+
+.slider__slide {
+  height: auto;
+}
+
+.slider__button {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.slider__button .slider__button-icon g {
+  -webkit-transition: fill .2s ease-in-out;
+  -o-transition: fill .2s ease-in-out;
+  transition: fill .2s ease-in-out;
+}
+
+.slider__button:hover .slider__button-icon g {
+  fill: var(--accent-color);
+}
+
+.slider__button-prev {
+  left: -100px;
+}
+
+.slider__button-next {
+  right: -100px;
+}
+
+.slider__button_size_small {
+  width: 22px;
+  height: 22px;
+}
+
+.slider__button_size_small.slider__button-prev {
+  left: 0;
+}
+
+.slider__button_size_small.slider__button-next {
+  right: 0;
+}
+
+.slider__button-icon {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.slider__button-next-icon {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.slider__pagination {
+  bottom: 40px !important;
+}
+
+.slider__pagination span {
+  background: var(--default-color) !important;
+  opacity: 0.7 !important;
+  width: 32px !important;
+  height: 4px !important;
+  border-radius: 0 !important;
+}
+
+.slider__pagination span.swiper-pagination-bullet-active {
+  background: var(--accent-color-second) !important;
+  opacity: 1 !important;
+}
+
+@media screen and (max-width: 1400px) {
+  .slider__button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .slider__button_size_small {
+    width: 22px;
+    height: 22px;
+  }
+
+  .slider__button-prev {
+    left: 0;
+  }
+
+  .slider__button-next {
+    right: 0;
+  }
+
+  .slider__pagination {
+    bottom: 30px !important;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .slider__button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .slider__button_size_small {
+    width: 22px;
+    height: 22px;
+  }
+
+  .slider__button-prev {
+    left: 0;
+  }
+
+  .slider__button-next {
+    right: 0;
+  }
+
+  .slider__pagination {
+    bottom: 30px !important;
+  }
+
+}

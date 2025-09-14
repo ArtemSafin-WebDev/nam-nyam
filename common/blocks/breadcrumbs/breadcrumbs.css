@@ -1,0 +1,108 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.breadcrumbs-share {
+  padding: 12px 0 24px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.breadcrumbs-share__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+  padding-top: 12px;
+}
+
+.breadcrumbs__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumbs__item::after {
+  content: url(../../images/breadcrumb-arrow.svg);
+  line-height: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-height: 5px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.breadcrumbs__item:last-child::after {
+  display: none;
+}
+
+.breadcrumbs__link {
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--accent-color);
+}
+
+.breadcrumbs__item:last-child .breadcrumbs__link {
+  color: #CBD3D9;
+  cursor: default;
+  pointer-events: none;
+}
+
+.share {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.share__icon {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1279px) {
+  .breadcrumbs-share {
+    padding: 15px 0 15px;
+  }
+
+  .breadcrumbs-share__box {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .breadcrumbs {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {}

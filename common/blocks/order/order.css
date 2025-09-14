@@ -1,0 +1,171 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.order {
+  display: -ms-grid;
+  display: grid;
+  gap: 8px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-grid-columns: -webkit-max-content 8px -webkit-max-content;
+  -ms-grid-columns: max-content 8px max-content;
+  grid-template-columns: -webkit-max-content -webkit-max-content;
+  grid-template-columns: max-content max-content;
+  z-index: 2;
+  position: relative;
+  margin-top: auto;
+}
+
+.card_add_block{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.catalog__view-box_type_list .card_add_block{
+    max-width: 145px;
+}
+
+.order__quantity-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-grid-columns: -webkit-min-content 30px -webkit-min-content;
+  -ms-grid-columns: min-content 30px min-content;
+  grid-template-columns: -webkit-min-content 30px -webkit-min-content;
+  grid-template-columns: min-content 30px min-content;
+  border: 1px solid #CBD3D9;
+  border-radius: 8px;
+  padding: 6.5px 14px;
+  flex-grow: 1;
+  justify-content: space-between; 
+}
+
+.basket-popup__products .order__quantity-container {
+   flex-grow: unset;
+   justify-content: unset; 
+}
+
+.order__minus,
+.order__plus,
+.order__minus_basket,
+.order__plus_basket
+ {
+  background: none;
+  color: var(--accent-color);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 0;
+  -webkit-transition: .2s color ease-in-out;
+  -o-transition: .2s color ease-in-out;
+  transition: .2s color ease-in-out;
+  width: 12px;
+  min-width: 14px;
+  height: 14px;
+  min-height: 12px;
+  position: relative;
+  display: block;
+}
+
+.order__minus::before,
+.order__plus::before,
+.order__plus::after,
+.order__minus_basket::before,
+.order__plus_basket::before,
+.order__plus_basket::after
+ {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: var(--accent-color);
+  width: 100%;
+  height: 100%;
+  -webkit-transition: .2s background-color ease-in-out;
+  -o-transition: .2s background-color ease-in-out;
+  transition: .2s background-color ease-in-out;
+}
+
+.order__minus::before, .order__minus_basket::before{
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.order__plus::before,.order__plus_basket::before {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.order__plus::after,.order__plus_basket::after {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.order__minus:hover,
+.order__plus:hover, 
+.order__minus_basket:hover,
+.order__plus_basket:hover
+{
+  background: none;
+  color: var(--accent-color-hover);
+}
+
+.order__minus:hover::before,
+.order__plus:hover::before,
+.order__plus:hover::after,
+.order__minus_basket:hover::before,
+.order__plus_basket:hover::before,
+.order__plus_basket:hover::after
+ {
+  background-color: var(--accent-color-hover);
+}
+
+.order__quantity {
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.order__quantity::-webkit-inner-spin-button,
+.order__quantity::-webkit-outer-spin-button {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .order__quantity-container {
+    -ms-grid-columns: -webkit-min-content 22px -webkit-min-content;
+    -ms-grid-columns: min-content 22px min-content;
+    grid-template-columns: -webkit-min-content 22px -webkit-min-content;
+    grid-template-columns: min-content 22px min-content;
+  }
+}

@@ -1,0 +1,35 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.box {
+  max-width: 1200px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.box__slider {
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1400px) {
+  .box__slider {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .box {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+
+  .box__slider {
+    padding: 0 48px;
+  }
+}

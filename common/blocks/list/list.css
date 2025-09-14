@@ -1,0 +1,38 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list_type_accent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list_type_accent li {
+  position: relative;
+  padding-left: 12px;
+}
+
+.list_type_accent li::before {
+  color: var(--accent-color);
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  font-size: 30px;
+  line-height: 0;
+}

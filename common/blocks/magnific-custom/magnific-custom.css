@@ -1,0 +1,143 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.magnific-custom {
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.magnific-custom.mfp-bg {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.magnific-nm.mfp-bg {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+
+.magnific-custom .mfp-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  position: relative;
+}
+
+/*.magnific-custom.mfp-wrap {
+  position: fixed !important;
+}*/
+
+/*.magnific-nm.mfp-wrap {
+  position: fixed !important;
+}*/
+
+.magnific-custom .mfp-content {
+  padding: 32px 22px;
+  background: var(--default-color);
+  border-radius: 12px;
+  min-width: 100px;
+}
+
+.magnific-custom img.mfp-img {
+  padding: 0;
+}
+
+.magnific-custom.magnific-det_popup  .card-popup{
+  /*padding: 32px 22px;*/
+  padding: 0px;
+  max-width: 500px;
+}
+
+.magnific-nm .card-popup{
+  padding: 32px 22px;
+  background: var(--default-color);
+  border-radius: 12px;     
+}
+
+.magnific-custom img.mfp-img {
+  padding: 0;
+}
+
+.magnific-nm img.mfp-img {
+  padding: 0;
+}
+
+.magnific-custom .mfp-figure:after {
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.magnific-nm .mfp-figure:after {
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.magnific-custom .mfp-close {
+  color: transparent;
+  width: 24px;
+  height: 24px;
+  background-image: url(../../images/popup-close.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 5px;
+  right: 5px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  opacity: 1;
+  -webkit-transition: opacity .2s ease-in-out;
+  -o-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
+.magnific-nm .mfp-close {
+  color: transparent;
+  width: 24px;
+  height: 24px;
+  background-image: url(../../images/popup-close.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 5px;
+  right: 5px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  opacity: 1;
+  -webkit-transition: opacity .2s ease-in-out;
+  -o-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
+.magnific-custom .mfp-close:hover {
+  opacity: .5;
+}
+
+.magnific-nm .mfp-close:hover {
+  opacity: .5;
+}

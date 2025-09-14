@@ -1,0 +1,224 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.manager {
+  padding: 125px 0 85px;
+  overflow: hidden;
+}
+
+.manager__box {
+  background: var(--accent-color-second);
+  border-radius: 12px;
+  padding: 63px 52px 57px;
+  position: relative;
+}
+
+.manager__form {
+  max-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.manager__title {
+  font-size: 38px;
+  line-height: 1.2;
+  text-align: left;
+  color: var(--default-color);
+  margin: 0;
+}
+
+.manager__input {
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--default-color);
+  border-bottom: 1px solid #ffffff80;
+  outline-color:#ffffff80 !important;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.manager__input:focus {
+  /*outline: 1px var(--default-color) solid;*/
+  outline:none;
+  border-bottom: 1px solid #ffffff !important;
+  border-radius: none;
+}
+
+.manager__input:required:valid{
+    border-color:#ffffff80 !important;
+    outline-color:#ffffff80 !important;
+}
+.manager__input::-webkit-input-placeholder {
+  color: var(--default-color);
+}
+
+.manager__input::-moz-placeholder {
+  color: var(--default-color);
+}
+
+.manager__input:-ms-input-placeholder {
+  color: var(--default-color);
+}
+
+.manager__input::-ms-input-placeholder {
+  color: var(--default-color);
+}
+
+.manager__input::placeholder {
+  color: var(--default-color);
+}
+
+.manager__checkbox-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 18px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.manager__input_type_checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+
+.manager__checkbox-custom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border-radius: 4px;
+  min-width: 22px;
+  min-height: 22px;
+  width: 22px;
+  height: 22px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.manager__checkbox-custom::before {
+  content: url(../../images/checkbox.svg);
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: none;
+  position: relative;
+  top: 2px;
+}
+
+.manager__input_type_checkbox:checked~.manager__checkbox-custom::before {
+  display: block;
+}
+
+.manager__checkbox-text {
+  color: var(--default-color);
+  font-size: 16px;
+  /*line-height: 1.4;*/
+  line-height: 21px;
+}
+
+.manager__image {
+  position: absolute;
+  display: block;
+  max-width: 50%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  right: 0;
+  top: -60px;
+}
+
+@media screen and (max-width: 1279px) {
+  .manager {
+    padding: 55px 0 59px;
+  }
+
+  .manager__box {
+    padding: 37px 32px 27px;
+  }
+
+  .manager__title {
+    font-size: 32px;
+  }
+
+  .manager__checkbox-wrapper {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .manager__image {
+    max-width: 60%;
+    right: -15%;
+    top: -5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .manager {
+    padding: 55px 0 5px;
+  }
+
+  .manager__box {
+    padding: 37px 20px 27px;
+  }
+
+  .manager__form {
+    max-width: 100%;
+  }
+
+  .manager__title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .manager__button {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .manager__image {
+    position: relative;
+    max-width: 125%;
+    top: unset;
+    bottom: 0;
+    margin-bottom: -50%;
+    -webkit-transform: translate(-22px, 10%);
+    -ms-transform: translate(-22px, 10%);
+    transform: translate(-22px, 10%);
+    left: 0;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 414px) {
+   .manager__image {
+    max-width: 120%;
+   }
+}

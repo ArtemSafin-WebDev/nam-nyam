@@ -1,0 +1,73 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 50px;
+}
+
+.pagination__button {
+  font-size: 18px;
+  line-height: 1.2;
+  text-decoration: underline;
+}
+
+.pagination__button_disable {
+  color: var(--default-darker-color-second);
+  cursor: default;
+  text-decoration: none;
+}
+
+.pagination__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+}
+
+.pagination__item,
+.pagination__link {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.pagination__link {
+  text-decoration: underline;
+}
+
+.pagination__active {
+  color: var(--default-darker-color-second);
+  cursor: default;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1279px) {
+  .pagination {
+    padding-top: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pagination {
+    padding-top: 18px;
+  }
+
+  .pagination__button {
+    font-size: 16px;
+  }
+
+  .pagination__item,
+  .pagination__link {
+    font-size: 16px;
+  }
+}
