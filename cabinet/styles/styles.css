@@ -1106,6 +1106,21 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .account__table--excel {
+    grid-template-columns: minmax(0, 198fr) minmax(0, 170fr) minmax(0, 190fr) minmax(0, 203fr) minmax(0, 203fr) minmax(0, 236fr);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .account__table--excel {
+    width: 1200px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__table--excel {
+    width: auto;
+  }
+}
+@media screen and (min-width: 768px) {
   .account__table--order-employee {
     grid-template-columns: minmax(0, 202fr) minmax(0, 250fr) minmax(0, 132fr) minmax(0, 286fr) minmax(0, 330fr);
   }
@@ -3228,4 +3243,200 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 html {
   scrollbar-gutter: stable;
+}
+
+.account__excel-bottom-heading {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  font-family: "Circe Rounded", sans-serif;
+  margin-bottom: 18px;
+  text-transform: none;
+}
+@media screen and (max-width: 1279px) {
+  .account__excel-bottom-heading {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__excel-bottom-heading {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 16px;
+  }
+}
+
+.account__excel-top {
+  margin-bottom: 30px;
+}
+
+.account__excel-top-wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  border: 2px solid #f3f6f8;
+  padding: 32px;
+}
+@media screen and (max-width: 767px) {
+  .account__excel-top-wrapper {
+    padding: 20px;
+  }
+}
+
+.account__excel-top-wrapper-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1279px) {
+  .account__excel-top-wrapper-row {
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+  }
+}
+
+.account__excel-form {
+  display: flex;
+  flex-direction: column;
+  width: 585px;
+}
+@media screen and (max-width: 1279px) {
+  .account__excel-form {
+    width: auto;
+  }
+}
+
+.account__excel-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.account__excel-form-submit {
+  margin-top: 32px;
+  align-self: flex-start;
+}
+
+.account__attach-file-loader {
+  align-self: flex-start;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.account__attach-file-loader-input {
+  display: none;
+}
+
+.account__attach-file-loader-text {
+  padding: 8px 30px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  color: #6f6f6f;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid #cbd3d9;
+  display: block;
+  margin-top: 12px;
+  align-self: flex-start;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+}
+.account__attach-file-loader-text:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.account__excel-download-menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  padding: 8px 68px;
+  color: #79c500;
+  border-radius: 8px;
+  border: 1px solid #79c500;
+  text-decoration: none;
+}
+.account__excel-download-menu img {
+  flex-shrink: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 18px;
+  height: 18px;
+}
+@media screen and (max-width: 1279px) {
+  .account__excel-download-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__excel-download-menu {
+    position: static;
+    width: auto;
+    font-size: 16px;
+    padding-right: 16px;
+    padding-left: 16px;
+    align-self: stretch;
+    margin: 0;
+  }
+}
+
+.account__excel {
+  margin-top: 8px;
+}
+
+.account__excel-top-text {
+  margin-top: 32px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 120%;
+}
+@media screen and (max-width: 1279px) {
+  .account__excel-top-text {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 120%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__excel-top-text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 120%;
+    margin-top: 16px;
+  }
+}
+.account__excel-top-text b {
+  font-weight: 700;
+}
+
+.accout__excel-checkbox {
+  margin-top: 32px;
 }/*# sourceMappingURL=styles.css.map */
