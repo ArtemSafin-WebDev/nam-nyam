@@ -1106,6 +1106,21 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .account__table--order-employee {
+    grid-template-columns: minmax(0, 202fr) minmax(0, 250fr) minmax(0, 132fr) minmax(0, 286fr) minmax(0, 330fr);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .account__table--order-employee {
+    width: 1200px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__table--order-employee {
+    width: auto;
+  }
+}
+@media screen and (min-width: 768px) {
   .account__table--orders-list {
     grid-template-columns: minmax(0, 120fr) minmax(0, 146fr) minmax(0, 190fr) minmax(0, 118fr) minmax(0, 150fr) minmax(0, 240fr) minmax(0, 246fr);
   }
@@ -1207,6 +1222,9 @@
   color: #3a4c58;
   padding: 15px 16px;
   border-right: 1px solid white;
+}
+.account__table-header-cell:has(.account__table-header-sort) {
+  cursor: pointer;
 }
 .account__table-header-cell:last-child {
   border-right: none;
@@ -3121,4 +3139,34 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .account__order-complex-card-info {
     min-width: auto;
   }
+}
+
+.account__table-header-sort {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.account__table-header-sort svg {
+  width: 14px;
+  flex-shrink: 0;
+  transform: rotate(180deg);
+  fill: var(--accent-color);
+  height: 8px;
+}
+
+.account__table-cell-accordion-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  width: 30%;
+  flex-grow: 1;
+}
+.account__table-cell-accordion-btn svg {
+  width: 14px;
+  flex-shrink: 0;
+  transform: rotate(180deg);
+  fill: var(--accent-color);
+  height: 8px;
 }/*# sourceMappingURL=styles.css.map */

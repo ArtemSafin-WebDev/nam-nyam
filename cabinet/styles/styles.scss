@@ -1109,6 +1109,22 @@
     display: block;
   }
 
+  &--order-employee {
+    @media screen and (min-width: 768px) {
+      grid-template-columns:
+        minmax(0, 202fr) minmax(0, 250fr) minmax(0, 132fr) minmax(0, 286fr)
+        minmax(0, 330fr);
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 1200px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: auto;
+    }
+  }
+
   &--orders-list {
     @media screen and (min-width: 768px) {
       grid-template-columns:
@@ -1216,6 +1232,10 @@
   color: #3a4c58;
   padding: 15px 16px;
   border-right: 1px solid white;
+
+  &:has(.account__table-header-sort) {
+    cursor: pointer;
+  }
   &:last-child {
     border-right: none;
   }
@@ -3072,5 +3092,36 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   min-width: 62px;
   @media screen and (max-width: 767px) {
     min-width: auto;
+  }
+}
+
+.account__table-header-sort {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  svg {
+    width: 14px;
+    flex-shrink: 0;
+    transform: rotate(180deg);
+    fill: var(--accent-color);
+    height: 8px;
+  }
+}
+
+.account__table-cell-accordion-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  width: 30%;
+  flex-grow: 1;
+
+  svg {
+    width: 14px;
+    flex-shrink: 0;
+    transform: rotate(180deg);
+    fill: var(--accent-color);
+    height: 8px;
   }
 }
