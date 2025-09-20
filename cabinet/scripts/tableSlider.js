@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // },
         pagination: {
           el: element.querySelector(".account__table-slider-pagination"),
+          clickable: true,
         },
       });
 
