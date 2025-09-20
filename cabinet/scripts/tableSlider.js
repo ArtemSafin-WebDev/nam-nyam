@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const instance = new Swiper(container, {
         speed: 600,
         spaceBetween: 24,
-        // autoHeight: true,
+        autoHeight: true,
         // effect: "fade",
         // fadeEffect: {
         //   crossFade: true,
@@ -21,7 +21,17 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
 
+      const update = () => {
+        instance.updateAutoHeight(0);
+      };
+
+      window.addEventListener("load", update);
+
+      document.addEventListener("accordion:toggle", update);
+
       return () => {
+        document.removeEventListener("accordion:toggle", update);
+        window.removeEventListener("load", update);
         instance.destroy(true);
       };
     });

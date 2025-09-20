@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn?.addEventListener("click", (event) => {
       event.preventDefault();
       element.classList.toggle("open");
+      document.dispatchEvent(new CustomEvent("accordion:toggle"));
     });
   });
 });

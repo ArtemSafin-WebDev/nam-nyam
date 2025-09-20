@@ -1259,9 +1259,6 @@
       flex-direction: column;
       height: auto;
       box-sizing: border-box;
-      padding: 16px 20px;
-      border-radius: 12px;
-      border: 1px solid #f3f6f8;
     }
 
     .swiper {
@@ -1319,6 +1316,14 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 1px solid #f3f6f8;
+    position: relative;
+
+    &:has(.account__table-cell-accordion-btn) {
+      padding-bottom: 40px;
+    }
   }
 }
 
@@ -3000,7 +3005,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     transition: transform 0.2s;
   }
 
-  .open & {
+  .account__order-complex.open & {
     svg {
       transform: rotate(0);
     }
@@ -3019,9 +3024,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .account__order-complex-dropdown {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 500ms;
+  // transition: grid-template-rows 500ms;
 
-  .open & {
+  .account__order-complex.open & {
     grid-template-rows: 1fr;
   }
 }
@@ -3116,6 +3121,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   width: 30%;
   flex-grow: 1;
+  -webkit-tap-highlight-color: transparent;
 
   svg {
     width: 14px;
@@ -3123,5 +3129,67 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     transform: rotate(180deg);
     fill: var(--accent-color);
     height: 8px;
+    transition: transform 0.2s;
   }
+
+  .account__table-row.open & {
+    svg {
+      transform: rotate(0);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    svg {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) rotate(180deg);
+      bottom: 14px;
+      z-index: 2;
+    }
+
+    .account__table-row.open & {
+      svg {
+        transform: translateX(-50%) rotate(0deg);
+      }
+    }
+  }
+}
+
+.account__table-order {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-rows: 0fr;
+  // transition: grid-template-rows 500ms;
+
+  .account__table-row.open ~ & {
+    grid-template-rows: 1fr;
+  }
+
+  @media screen and (max-width: 1279px) {
+    width: calc(100vw - 24px * 2);
+    width: calc(100svw - 24px * 2);
+    position: sticky;
+    left: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    position: static;
+    width: auto;
+  }
+}
+
+.account__table-order-inner {
+  grid-row: 1 / 2;
+  overflow: hidden;
+}
+
+.account__table-order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+html {
+  scrollbar-gutter: stable;
 }
