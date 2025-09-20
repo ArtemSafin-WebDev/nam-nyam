@@ -3285,6 +3285,7 @@ html {
   border-radius: 12px;
   border: 2px solid #f3f6f8;
   padding: 32px;
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   .account__excel-top-wrapper {
@@ -3303,9 +3304,9 @@ html {
     flex-direction: column;
     align-items: stretch;
     position: relative;
+    display: contents;
   }
 }
-
 .account__excel-form {
   display: flex;
   flex-direction: column;
@@ -3389,8 +3390,8 @@ html {
 @media screen and (max-width: 1279px) {
   .account__excel-download-menu {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 32px;
+    top: 32px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -3402,6 +3403,7 @@ html {
     padding-left: 16px;
     align-self: stretch;
     margin: 0;
+    margin-top: 32px;
   }
 }
 
@@ -3439,4 +3441,141 @@ html {
 
 .accout__excel-checkbox {
   margin-top: 32px;
+}
+
+.account__excel-files-formats {
+  margin-left: auto;
+  width: 450px;
+  max-width: 100%;
+}
+@media screen and (max-width: 1279px) {
+  .account__excel-files-formats {
+    margin: 0;
+    order: 10;
+    margin-top: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__excel-files-formats {
+    width: auto;
+    max-width: none;
+    margin-top: 16px;
+  }
+}
+
+.account__excel-files-formats-heading {
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 140%;
+  margin-bottom: 16px;
+  font-family: inherit;
+}
+@media screen and (max-width: 767px) {
+  .account__excel-files-formats-heading {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 120%;
+  }
+}
+
+.account__excel-files-formats-table {
+  display: grid;
+  grid-template-columns: 180fr 88fr 96fr 86fr;
+}
+@media screen and (max-width: 767px) {
+  .account__excel-files-formats-table {
+    grid-template-columns: 90fr 20fr 68fr 54fr;
+  }
+}
+
+.account__excel-files-formats-table-header {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: subgrid;
+  border: 1px solid #f3f8fb;
+  background: #f3f8fb;
+}
+
+.account__excel-files-formats-table-header-cell {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: #3a4c58;
+  padding: 15px 16px;
+  border-right: 1px solid white;
+}
+.account__excel-files-formats-table-header-cell:has(.account__table-header-sort) {
+  cursor: pointer;
+}
+.account__excel-files-formats-table-header-cell:last-child {
+  border-right: none;
+}
+@media screen and (max-width: 767px) {
+  .account__excel-files-formats-table-header-cell {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 4px 8px;
+  }
+}
+
+.account__excel-files-formats-table-body {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+.account__excel-files-formats-table-row {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: subgrid;
+  border: 1px solid #f3f6f8;
+  border-top: none;
+}
+
+.account__excel-files-formats-table-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid #f3f6f8;
+  padding: 14px 16px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 350;
+}
+@media screen and (max-width: 767px) {
+  .account__excel-files-formats-table-cell {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 16px;
+    padding: 4px 8px;
+  }
+}
+.account__excel-files-formats-table-cell a {
+  color: inherit;
+  text-decoration: none;
+}
+.account__excel-files-formats-table-cell a:link, .account__excel-files-formats-table-cell a:visited {
+  color: inherit;
+}
+.account__excel-files-formats-table-cell img {
+  width: 18px;
+  height: 18px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.account__excel-files-formats-table-cell:last-child {
+  border-right: none;
+}
+.account__excel-files-formats-table-cell .account__checkbox {
+  margin-left: auto;
+  margin-right: auto;
 }/*# sourceMappingURL=styles.css.map */
