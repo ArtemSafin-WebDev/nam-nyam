@@ -744,6 +744,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
   height: 48px;
   width: 100%;
   font-size: 20px;
@@ -769,6 +770,22 @@
 .account__input-select-btn.placeholder-shown {
   color: #6f6f6f;
 }
+.account__input-select-btn--compact {
+  padding: 0 14px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid #cbd3d9;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.account__input-select-btn--compact svg {
+  width: 12px;
+  height: 12px;
+  fill: var(--accent-color);
+}
+.account__input-select-btn--compact .account__input-select-btn-text {
+  padding-top: 2px;
+}
 @media screen and (max-width: 767px) {
   .account__input-select-btn {
     font-size: 16px;
@@ -780,6 +797,22 @@
   .account__input-select-btn svg {
     width: 18px;
     height: 18px;
+  }
+  .account__input-select-btn--compact {
+    padding: 0 14px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid #cbd3d9;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .account__input-select-btn--compact svg {
+    width: 14px;
+    height: 14px;
+    fill: var(--accent-color);
+  }
+  .account__input-select-btn--compact .account__input-select-btn-text {
+    padding-top: 2px;
   }
 }
 
@@ -800,6 +833,20 @@
   padding-top: 0;
   opacity: 0;
   visibility: hidden;
+}
+.account__input-select-dropdown--rounded {
+  padding-top: 8px;
+}
+.account__input-select-dropdown--rounded .account__input-select-dropdown-inner {
+  border-radius: 8px;
+  border: 1px solid #cbd3d9;
+  box-shadow: none;
+  overflow: hidden;
+}
+.account__input-select-dropdown--rounded .account__input-select-option-text {
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 8px 12px;
 }
 .account__input-select.active .account__input-select-dropdown {
   opacity: 1;
@@ -2341,5 +2388,250 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-style: normal;
     font-weight: 350;
     margin-top: 40px;
+  }
+}
+
+.account__orders-list-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.account__orders-list-title {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  font-family: "Circe Rounded", sans-serif;
+  margin-bottom: 20px;
+  text-transform: none;
+}
+@media screen and (max-width: 1279px) {
+  .account__orders-list-title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__orders-list-title {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 10px;
+  }
+}
+
+.account__orders-list-form {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+@media screen and (max-width: 1279px) {
+  .account__orders-list-form {
+    display: grid;
+    grid-template-columns: minmax(0, 390fr) minmax(0, 281fr);
+    grid-gap: 50px;
+    grid-row-gap: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__orders-list-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+}
+
+.account__orders-list-form-block {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.account__orders-list-form-block:nth-child(1) {
+  width: 450px;
+}
+.account__orders-list-form-block:nth-child(2) {
+  width: 300px;
+}
+.account__orders-list-form-block:nth-child(3) {
+  width: 367px;
+}
+@media screen and (max-width: 1279px) {
+  .account__orders-list-form-block:nth-child(1) {
+    width: auto;
+  }
+  .account__orders-list-form-block:nth-child(2) {
+    width: auto;
+  }
+  .account__orders-list-form-block:nth-child(3) {
+    width: auto;
+    grid-column: 1/-1;
+    max-width: 367px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__orders-list-form-block:nth-child(1) {
+    width: auto;
+  }
+  .account__orders-list-form-block:nth-child(2) {
+    width: auto;
+  }
+  .account__orders-list-form-block:nth-child(3) {
+    width: auto;
+    grid-column: 1/-1;
+    max-width: none;
+  }
+}
+
+.account__orders-list-form-label {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 120%;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+@media screen and (max-width: 767px) {
+  .account__orders-list-form-label {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 120%;
+  }
+}
+
+.account__orders-list-form-field {
+  width: 30%;
+  flex-grow: 1;
+}
+
+.account__orders-list-dates-range {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.account__orders-list-dates-range-item {
+  flex-shrink: 0;
+  flex-grow: 1;
+  width: 30%;
+}
+
+.account__orders-list-dates-range-item-label {
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+  border-radius: 8px;
+  border: 1px solid #cbd3d9;
+  gap: 8px;
+  padding-right: 14px;
+}
+
+.account__orders-list-dates-range-item-label-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  color: #cbd3d9;
+}
+
+.account__orders-list-dates-range-item-input {
+  width: 30%;
+  flex-grow: 1;
+  height: 32px;
+  font-size: 14px;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  line-height: 120%;
+  box-sizing: border-box;
+}
+
+.account__orders-list-top {
+  margin-bottom: 22px;
+}
+
+.account__orders-list-text {
+  margin-top: 25px;
+}
+
+.account__orders-list-text-inner {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 120%;
+}
+@media screen and (max-width: 1279px) {
+  .account__orders-list-text-inner {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 120%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__orders-list-text-inner {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 120%;
+  }
+  .account__orders-list-text:not(.show-all) .account__orders-list-text-inner {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.account__orders-list-text-show-more {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .account__orders-list-text-show-more {
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 120%;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: auto;
+    text-underline-offset: 1px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--accent-color);
+  }
+  .account__orders-list-text-show-more > span:nth-child(2) {
+    display: none;
+  }
+  .account__orders-list-text.show-all .account__orders-list-text-show-more > span:nth-child(1) {
+    display: none;
+  }
+  .account__orders-list-text.show-all .account__orders-list-text-show-more > span:nth-child(2) {
+    display: inline;
+  }
+}
+
+.account__orders-list-show-complete {
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 767px) {
+  .account__orders-list {
+    margin-top: 10px;
   }
 }/*# sourceMappingURL=styles.css.map */

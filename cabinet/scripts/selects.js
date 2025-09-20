@@ -28,5 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
       select.classList.toggle("active");
     });
+
+    document.addEventListener("click", (event) => {
+      if (select.contains(event.target)) return;
+      select.classList.remove("active");
+    });
   });
 });

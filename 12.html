@@ -113,7 +113,8 @@
         rel="stylesheet" />
     <link href="/common/styles/catalog.css?1713902435775" type="text/css" data-template-style="true" rel="stylesheet" />
     <link rel="stylesheet" href="/cabinet/styles/styles.css" />
-
+    <link href="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
@@ -123,6 +124,8 @@
     <script src="cabinet/scripts/selects.js"></script>
     <script src="cabinet/scripts/modals.js"></script>
     <script src="cabinet/scripts/tableSlider.js"></script>
+    <script src="cabinet/scripts/datepicker.js"></script>
+    <script src="cabinet/scripts/showMore.js"></script>
 </head>
 
 <body class="page">
@@ -223,6 +226,183 @@
 
                 </div>
                 <div class="account__orders-list">
+                    <div class="account__orders-list-top">
+                        <h2 class="account__orders-list-title">
+                            Список заказов (общих)
+                        </h2>
+                        <form action="/" method="POST" class="account__orders-list-form">
+                            <div class="account__orders-list-form-block">
+                                <div class="account__orders-list-form-label">
+                                    Дата доставки:
+                                </div>
+                                <div class="account__orders-list-form-field">
+                                    <div class="account__orders-list-dates-range">
+                                        <div class="account__orders-list-dates-range-item">
+                                            <label class="account__orders-list-dates-range-item-label">
+                                                <span class="account__orders-list-dates-range-item-label-text">
+                                                    c
+                                                </span>
+                                                <input type="text"
+                                                    class="account__orders-list-dates-range-item-input js-datepicker-input"
+                                                    data-position="bottom center">
+                                            </label>
+                                        </div>
+                                        <div class="account__orders-list-dates-range-separator">
+                                            —
+                                        </div>
+                                        <div class="account__orders-list-dates-range-item">
+                                            <label class="account__orders-list-dates-range-item-label">
+                                                <span class="account__orders-list-dates-range-item-label-text">
+                                                    по
+                                                </span>
+                                                <input type="text"
+                                                    class="account__orders-list-dates-range-item-input js-datepicker-input">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="account__orders-list-form-block">
+                                <div class="account__orders-list-form-label">
+                                    Статус заказа
+                                </div>
+                                <div class="account__orders-list-form-field">
+                                    <div class="account__input-select js-select">
+
+                                        <button class="account__input-select-btn account__input-select-btn--compact"
+                                            type="button" data-placeholder="">
+                                            <span class="account__input-select-btn-text">
+
+                                            </span>
+                                            <svg width="14" height="11" viewBox="0 0 14 11">
+                                                <path d="M7 11L13.0622 0.5H0.937822L7 11Z" />
+                                            </svg>
+                                        </button>
+                                        <div
+                                            class="account__input-select-dropdown account__input-select-dropdown--rounded">
+                                            <div class="account__input-select-dropdown-inner">
+                                                <ul class="account__input-select-list">
+                                                    <li class="account__input-select-list-item">
+                                                        <label class="account__input-select-option">
+                                                            <input type="radio" name="delivery-status"
+                                                                value="Доставлено"
+                                                                class="account__input-select-option-input">
+                                                            <span class="account__input-select-option-mark">
+
+                                                            </span>
+                                                            <span class="account__input-select-option-text">
+                                                                Доставлено
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="account__input-select-list-item">
+                                                        <label class="account__input-select-option">
+                                                            <input type="radio" name="delivery-status"
+                                                                value="Не доставлено"
+                                                                class="account__input-select-option-input">
+                                                            <span class="account__input-select-option-mark">
+
+                                                            </span>
+                                                            <span class="account__input-select-option-text">
+                                                                Не доставлено
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="account__orders-list-form-block">
+                                <div class="account__orders-list-form-label">
+                                    Адрес доставки
+                                </div>
+                                <div class="account__orders-list-form-field">
+                                    <div class="account__input-select js-select">
+
+                                        <button class="account__input-select-btn account__input-select-btn--compact"
+                                            type="button" data-placeholder="">
+                                            <span class="account__input-select-btn-text">
+
+                                            </span>
+                                            <svg width="14" height="11" viewBox="0 0 14 11">
+                                                <path d="M7 11L13.0622 0.5H0.937822L7 11Z" />
+                                            </svg>
+                                        </button>
+                                        <div
+                                            class="account__input-select-dropdown account__input-select-dropdown--rounded">
+                                            <div class="account__input-select-dropdown-inner">
+                                                <ul class="account__input-select-list">
+                                                    <li class="account__input-select-list-item">
+                                                        <label class="account__input-select-option">
+                                                            <input type="radio" name="delivery-address" value="Адрес 1"
+                                                                class="account__input-select-option-input">
+                                                            <span class="account__input-select-option-mark">
+
+                                                            </span>
+                                                            <span class="account__input-select-option-text">
+                                                                Адрес 1
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="account__input-select-list-item">
+                                                        <label class="account__input-select-option">
+                                                            <input type="radio" name="delivery-address" value="Адрес 2"
+                                                                class="account__input-select-option-input">
+                                                            <span class="account__input-select-option-mark">
+
+                                                            </span>
+                                                            <span class="account__input-select-option-text">
+                                                                Адрес 2
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </form>
+                        <div class="account__orders-list-text">
+                            <div class="account__orders-list-text-inner">
+                                По кнопке Сформировать — формируется общий заказ с назначением уему номера (№) и статуса
+                                заказа — Сформирован! Для возможности корректировки сформированного заказа, необходимо
+                                нажать кнопку Редактировать, при этом статус заказа не Редактируется! После 17:00 кнопка
+                                Редактировать становится неактивной для заказов на следующий день.
+                            </div>
+                            <button class="account__orders-list-text-show-more js-show-more" type="button">
+                                <span>
+                                    Подробнее
+                                </span>
+                                <span>
+                                    Скрыть
+                                </span>
+                            </button>
+                        </div>
+                        <div class="account__orders-list-show-complete">
+                            <label class="account__checkbox">
+                                <input type="checkbox" name="show-archive" value="Y" class="account__checkbox-input">
+                                <span class="account__checkbox-mark">
+                                    <svg width="22" height="22" viewBox="0 0 22 22">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                    </svg>
+                                </span>
+                                <span class="account__checkbox-text">
+                                    Показать выполненные заказы
+                                </span>
+
+                            </label>
+                        </div>
+
+                    </div>
                     <div class="account__scroll-wrapper">
                         <div class="account__table account__table--orders-list">
                             <div class="account__table-header">
