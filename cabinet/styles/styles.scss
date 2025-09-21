@@ -1075,7 +1075,7 @@
   font-weight: 400;
   line-height: 120%;
   text-transform: uppercase;
-  padding: 11px 26px;
+  padding: 11px 24px;
   padding-bottom: 8px;
   border-radius: 40px;
   border: 1px solid #cbd3d9;
@@ -1188,6 +1188,19 @@
 
   @media screen and (max-width: 767px) {
     display: block;
+  }
+  &--review-order {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 120fr 170fr 149fr 172fr 417fr 172fr;
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 1200px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: auto;
+    }
   }
 
   &--order-for-today {
@@ -1459,6 +1472,10 @@
       padding-bottom: 8px;
     }
     .account__table--order-for-today & {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    .account__table--review-order & {
       padding-top: 8px;
       padding-bottom: 8px;
     }
@@ -3873,8 +3890,8 @@ html {
 
 .account__rate-submit {
   align-self: center;
-  margin-top: 8px;
-  padding: 10px 20px;
+  margin-top: 20px;
+  padding: 12px 20px;
   width: 230px;
   max-width: 100%;
   text-transform: none;
@@ -3913,9 +3930,29 @@ html {
   display: flex;
   flex-direction: column;
   margin-top: 16px;
+  .account__input-select-btn {
+    height: 40px;
+  }
+
+  .account__input-select-btn-text {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  .placeholder-shown .account__input-select-btn-text {
+    color: #cbd3d9;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
 
   @media screen and (max-width: 1279px) {
-    margin: 0;
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 
@@ -3932,7 +3969,7 @@ html {
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
-    margin-bottom: 8px;
+    margin-bottom: 0;
   }
 }
 
@@ -3954,6 +3991,16 @@ html {
   }
 }
 
+textarea.account__rate-field-input {
+  resize: none;
+  box-shadow: none;
+  height: 160px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #cbd3d9;
+  background: white;
+}
+
 .account__add-media {
   gap: 6px;
   padding: 16px 0;
@@ -3962,19 +4009,25 @@ html {
   justify-content: space-between;
 
   @media screen and (max-width: 1279px) {
-    gap: 16px;
+    gap: 10px;
     flex-direction: column;
     align-items: stretch;
+    padding: 10px 0;
   }
 
   &--with-border {
     padding-top: 16px;
     border-top: 1px solid rgba(#cbd3d9, 0.5);
+    @media screen and (max-width: 1279px) {
+      padding-top: 10px;
+    }
+  }
 
-    @media screen and (max-width: 767px) {
-      &:last-child {
-        padding-bottom: 0;
-      }
+  &--with-bottom-border {
+    border-bottom: 1px solid rgba(#cbd3d9, 0.5);
+    margin-bottom: 16px;
+    @media screen and (max-width: 1279px) {
+      margin-bottom: 10px;
     }
   }
 }
@@ -4064,4 +4117,11 @@ html {
     border-color: var(--accent-color);
     color: var(--accent-color);
   }
+}
+
+.account__rate-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
 }
