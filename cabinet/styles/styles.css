@@ -35,6 +35,18 @@
   .account__top-row:has(.account__instruction) {
     margin-bottom: 24px;
   }
+  .account__top-row--same-line-on-mobile {
+    grid-template-columns: minmax(146px, 1fr) auto minmax(146px, 1fr);
+    grid-column-gap: 10px;
+  }
+  .account__top-row--same-line-on-mobile .account__title {
+    grid-column: 2/3;
+    order: revert;
+    white-space: normal;
+  }
+  .account__top-row--same-line-on-mobile .account__instruction {
+    grid-column: 3/4;
+  }
 }
 @media screen and (max-width: 767px) {
   .account__top-row {
@@ -42,6 +54,9 @@
     display: flex;
     flex-direction: column;
     gap: 0;
+  }
+  .account__top-row .account__title {
+    order: -20;
   }
 }
 
@@ -1172,6 +1187,21 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .account__table--employee-my-orders {
+    grid-template-columns: 166fr 200fr 119fr 257fr 171fr 270fr;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .account__table--employee-my-orders {
+    width: 1200px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__table--employee-my-orders {
+    width: auto;
+  }
+}
+@media screen and (min-width: 768px) {
   .account__table--review-order {
     grid-template-columns: 120fr 170fr 149fr 172fr 417fr 172fr;
   }
@@ -1548,6 +1578,7 @@ body.modal-open {
 
 .account__modal {
   background: rgba(0, 0, 0, 0.4);
+  scrollbar-gutter: stable;
   position: fixed;
   left: 0;
   top: 0;
@@ -2480,6 +2511,15 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-style: inherit;
   font-weight: 700;
   color: #79c500;
+}
+@media screen and (max-width: 767px) {
+  .account__order-before {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 18px;
+    text-align: center;
+  }
 }
 
 .account__order-link {
@@ -3802,13 +3842,6 @@ html {
 .account__rate-checkboxes-group:last-child {
   border-bottom: 1px solid rgba(203, 211, 217, 0.5);
 }
-@media screen and (max-width: 1279px) {
-  .account__rate-checkboxes-group:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-}
-
 .account__rate-checkboxes-group-title {
   display: flex;
   align-items: center;
@@ -3872,6 +3905,11 @@ html {
   list-style: none;
   grid-row-gap: 16px;
   padding-top: 16px;
+}
+@media screen and (max-width: 1279px) {
+  .account__rate-checkboxes-group-list {
+    padding-top: 10px;
+  }
 }
 @media screen and (max-width: 767px) {
   .account__rate-checkboxes-group-list {
@@ -3954,6 +3992,7 @@ html {
   font-weight: 400;
   line-height: 140%;
   color: #6f6f6f;
+  margin-bottom: 8px;
 }
 @media screen and (max-width: 767px) {
   .account__rate-field-label-text {
@@ -3961,7 +4000,6 @@ html {
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
-    margin-bottom: 0;
   }
 }
 
@@ -4114,4 +4152,253 @@ textarea.account__rate-field-input {
   flex-direction: column;
   gap: 10px;
   margin-top: 20px;
+}
+
+.account__person-settings {
+  display: flex;
+  flex-direction: column;
+  padding: 56px;
+  border-radius: 12px;
+  border: 2px solid #f3f6f8;
+}
+@media screen and (max-width: 1279px) {
+  .account__person-settings {
+    padding: 36px;
+    padding-bottom: 56px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__person-settings {
+    padding: 20px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+  }
+}
+
+.account__person-settings-title {
+  padding: 0;
+  margin: 0;
+  text-transform: none;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 28.8px */
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1279px) {
+  .account__person-settings-title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 28.8px */
+    text-transform: uppercase;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__person-settings-title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+}
+
+.account__person-settings-login {
+  margin-top: 10px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+@media screen and (max-width: 767px) {
+  .account__person-settings-login {
+    margin-top: 10px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+}
+.account__person-settings-login em {
+  font-style: normal;
+  color: var(--accent-color);
+}
+
+.account__person-settings-form-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.account__person-settings-form-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 30px;
+}
+@media screen and (max-width: 1279px) {
+  .account__person-settings-form-fields {
+    grid-gap: 20px;
+    grid-row-gap: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__person-settings-form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.account__person-settings-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.account__person-settings-form-field--aligned {
+  grid-column: 1/2;
+}
+
+.account__person-settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+}
+@media screen and (max-width: 1279px) {
+  .account__person-settings-form {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__person-settings-form {
+    margin-top: 20px;
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .account__person-settings-form-bottom {
+    margin-top: 32px;
+  }
+}
+
+.account__person-settings-form-bottom-heading {
+  padding: 0;
+  margin: 0;
+  text-transform: none;
+  margin-bottom: 32px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  font-family: "Circe Rounded", sans-serif;
+}
+@media screen and (max-width: 767px) {
+  .account__person-settings-form-bottom-heading {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 16px;
+  }
+}
+
+.account__person-settings-submit {
+  margin-top: 20px;
+  align-self: flex-start;
+}
+@media screen and (max-width: 767px) {
+  .account__person-settings-submit {
+    padding-left: 34px;
+    padding-right: 34px;
+    margin-top: 32px;
+  }
+}
+
+.account__orders-list-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 36px;
+}
+@media screen and (max-width: 767px) {
+  .account__orders-list-top-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+}
+.account__orders-list-top-row .account__orders-list-title {
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+  .account__orders-list-top-row .account__orders-list-title {
+    align-self: center;
+    text-align: center;
+  }
+}
+.account__orders-list-top-row .account__order-before {
+  margin: 0;
+  margin-left: auto;
+  align-self: center;
+}
+@media screen and (max-width: 767px) {
+  .account__orders-list-top-row .account__order-before {
+    margin: 0;
+  }
+}
+
+.account__orders-list-middle-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 30px;
+  grid-row-gap: 20px;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .account__orders-list-middle-row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+}
+.account__orders-list-middle-row .account__orders-list-show-complete {
+  margin: 0;
+  grid-column: 1/-1;
+}
+@media screen and (max-width: 1279px) {
+  .account__orders-list-middle-row .account__orders-list-show-complete {
+    grid-column: span 1;
+  }
+}
+.account__orders-list-middle-row .account__orders-list-form {
+  margin: 0;
+  max-width: 790px;
+}
+@media screen and (max-width: 1279px) {
+  .account__orders-list-middle-row .account__orders-list-form {
+    max-width: none;
+    grid-column: 1/-1;
+  }
+}
+.account__orders-list-middle-row .account__general-sidebar-print {
+  margin: 0;
+  width: 230px;
+  justify-self: flex-end;
+}
+@media screen and (max-width: 1279px) {
+  .account__orders-list-middle-row .account__general-sidebar-print {
+    order: 20;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account__orders-list-middle-row .account__general-sidebar-print {
+    width: 230px;
+    order: 30;
+    align-self: center;
+  }
 }/*# sourceMappingURL=styles.css.map */
