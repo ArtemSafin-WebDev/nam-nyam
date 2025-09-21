@@ -4339,6 +4339,9 @@ textarea.account__rate-field-input {
 }
 
 .account__person-settings-form-bottom {
+  &--with-margin {
+    margin-top: 16px;
+  }
   @media screen and (max-width: 767px) {
     margin-top: 32px;
   }
@@ -4633,6 +4636,28 @@ textarea.account__rate-field-input {
   &.active {
     svg {
       fill: #f9aa00;
+    }
+  }
+}
+
+.account__person-settings-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  .account__person-settings-login {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    .account__checkbox {
+      order: -30;
+      align-self: center;
     }
   }
 }
