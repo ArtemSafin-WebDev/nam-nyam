@@ -3087,6 +3087,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
+.account__order-item-bottom-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  @media screen and (max-width: 767px) {
+    grid-area: info;
+    gap: 8px;
+
+    .account__order-item-info {
+      width: 30%;
+      flex-grow: 1;
+      margin: 0;
+    }
+  }
+}
+
 .account__order-item-info {
   width: 224px;
   display: grid;
@@ -3179,6 +3195,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       padding-right: 0;
       margin-top: 12px;
     }
+
+    .account__order-item-bottom-wrapper {
+      order: 10;
+
+      margin-right: -10px;
+      margin-top: 12px;
+
+      .account__order-item-info {
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -3186,7 +3213,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: flex;
   align-items: center;
   gap: 20px;
-  justify-content: space-between;
+
   @media screen and (max-width: 767px) {
     display: contents;
   }
@@ -3210,7 +3237,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   text-align: left;
   -webkit-tap-highlight-color: transparent;
-
+  margin-right: auto;
   svg {
     width: 14.999px;
     height: 9px;
@@ -3227,6 +3254,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   @media screen and (max-width: 767px) {
+    margin-right: 0;
     width: 100%;
     justify-content: space-between;
     font-size: 16px;
@@ -4501,5 +4529,110 @@ textarea.account__rate-field-input {
 
   @media screen and (max-width: 1279px) {
     text-align: left;
+  }
+}
+
+.account__rated {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: minmax(0, 9fr) minmax(0, 3fr);
+
+  @media screen and (max-width: 1279px) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.account__rated-sidebar {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
+}
+
+.account__rated-sidebar-inner {
+  padding: 24px;
+  padding-top: 20px;
+  border-radius: 12px;
+  border: 1px solid #cbd3d9;
+  display: flex;
+  flex-direction: column;
+}
+
+.account__rated-sidebar-form {
+  display: flex;
+  flex-direction: column;
+
+  .account__add-media {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .account__rate-stars-title {
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  .account__rate-stars-row {
+    justify-content: flex-start;
+  }
+}
+
+.account__rated-sidebar-form-submit {
+  margin-top: 10px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  padding: 10px 20px;
+  text-transform: none;
+}
+
+.account__rated-sidebar-form-title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.account__order-item-rating {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 4px;
+  @media screen and (max-width: 767px) {
+    gap: 2px;
+    order: 50;
+  }
+}
+
+.account__order-item-rating-star {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+
+  @media screen and (max-width: 767px) {
+    width: 12px;
+    height: 12px;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #f3f6f8;
+  }
+
+  &.active {
+    svg {
+      fill: #f9aa00;
+    }
   }
 }
