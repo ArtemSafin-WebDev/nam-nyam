@@ -113,6 +113,19 @@
         rel="stylesheet" />
     <link href="/common/styles/catalog.css?1713902435775" type="text/css" data-template-style="true" rel="stylesheet" />
     <link rel="stylesheet" href="/cabinet/styles/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"
+        integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/customParseFormat.js"></script>
+    <script>dayjs.extend(window.dayjs_plugin_customParseFormat)</script>
+    <script src="cabinet/scripts/inputmask.js"></script>
+    <script src="cabinet/scripts/masks.js"></script>
+    <script src="cabinet/scripts/validation.js"></script>
+    <script src="cabinet/scripts/form.js"></script>
+    <script src="cabinet/scripts/ajaxModals.js"></script>
     <script src="cabinet/scripts/nav.js"></script>
 </head>
 
@@ -163,7 +176,7 @@
                     Добрый день! Заполните ключевые поля для регистрации личного кабинета!
                 </div>
                 <div class="account__auth-wrapper">
-                    <form action="/" method="POST" class="account__auth-form">
+                    <form action="/" method="POST" class="account__auth-form" data-need-validation="">
                         <div class="account__auth-fields">
                             <div class="account__auth-field">
                                 <div class="account__input-group">
@@ -183,7 +196,7 @@
                                         <span class="account__input-label-text">
                                             E-mail*
                                         </span>
-                                        <input type="text" class="account__input" name="person-email"
+                                        <input type="email" class="account__input" name="person-email"
                                             placeholder="name@company.ru" required="">
                                     </label>
                                 </div>
@@ -194,15 +207,16 @@
                                         <span class="account__input-label-text">
                                             Контактный телефон*
                                         </span>
-                                        <input type="tel" class="account__input" name="person-phone"
-                                            placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ" required="">
+                                        <input type="tel" class="account__input js-phone-input" name="person-phone"
+                                            placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ" required="" data-parsley-phone="">
                                     </label>
                                 </div>
                             </div>
 
                             <div class="account__auth-field">
                                 <label class="account__checkbox">
-                                    <input type="checkbox" name="policy" value="Y" class="account__checkbox-input">
+                                    <input type="checkbox" name="policy" value="Y" class="account__checkbox-input"
+                                        required="">
                                     <span class="account__checkbox-mark">
                                         <svg width="22" height="22" viewBox="0 0 22 22">
                                             <path fill-rule="evenodd" clip-rule="evenodd"

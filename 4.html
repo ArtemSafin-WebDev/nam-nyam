@@ -120,10 +120,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
         integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"
+        integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/customParseFormat.js"></script>
+    <script>dayjs.extend(window.dayjs_plugin_customParseFormat)</script>
+    <script src="cabinet/scripts/inputmask.js"></script>
+    <script src="cabinet/scripts/masks.js"></script>
+    <script src="cabinet/scripts/validation.js"></script>
+    <script src="cabinet/scripts/form.js"></script>
     <script src="cabinet/scripts/selects.js"></script>
     <script src="cabinet/scripts/modals.js"></script>
     <script src="cabinet/scripts/tableSlider.js"></script>
     <script src="cabinet/scripts/nav.js"></script>
+    <script src="cabinet/scripts/ajaxModals.js"></script>
 </head>
 
 <body class="page">
@@ -582,7 +595,7 @@
                         <div class="account__modal-employee-login">
                             Логин: <em>1365</em>
                         </div>
-                        <form action="/" method="POST" class="account__modal-employee-form">
+                        <form action="/" method="POST" class="account__modal-employee-form" data-need-validation="">
                             <div class="account__modal-employee-admin">
                                 <label class="account__checkbox">
                                     <input type="checkbox" name="is-admin" value="Y" class="account__checkbox-input"
@@ -638,7 +651,7 @@
                                             <span class="account__input-label-text">
                                                 E-mail*
                                             </span>
-                                            <input type="text" class="account__input" name="email"
+                                            <input type="email" class="account__input" name="email"
                                                 placeholder="name@company.ru" required="">
                                         </label>
                                     </div>
@@ -649,8 +662,8 @@
                                             <span class="account__input-label-text">
                                                 Телефон сотрудника*
                                             </span>
-                                            <input type="tel" class="account__input" name="phone"
-                                                placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ" required="">
+                                            <input type="tel" class="account__input js-phone-input" name="phone"
+                                                placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ" required="" data-parsley-phone="">
                                         </label>
                                     </div>
                                 </div>
@@ -660,55 +673,59 @@
                                             <span class="account__input-label-text">
                                                 Дата рождения
                                             </span>
-                                            <input type="date" class="account__input" name="birthdate"
-                                                inputmode="numeric" placeholder="11.01.2000" required="">
+                                            <input type="text" class="account__input js-date-input" name="birthdate"
+                                                inputmode="numeric" placeholder="11.01.2000" required=""
+                                                data-parsley-date="">
                                         </label>
                                     </div>
                                 </div>
                                 <div class="account__modal-employee-form-field">
-                                    <div class="account__input-select js-select">
-                                        <div class="account__input-select-label">
-                                            Отдел
-                                        </div>
-                                        <button class="account__input-select-btn" type="button"
-                                            data-placeholder="Бухгалтерия">
-                                            <span class="account__input-select-btn-text">
-                                                Бухгалтерия
-                                            </span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24">
-                                                <path
-                                                    d="M12 16.5C11.8082 16.5 11.6162 16.4267 11.4698 16.2803L3.9698 8.7803C3.67673 8.48723 3.67673 8.01267 3.9698 7.7198C4.26286 7.42692 4.73742 7.42673 5.0303 7.7198L12 14.6895L18.9698 7.7198C19.2629 7.42673 19.7374 7.42673 20.0303 7.7198C20.3232 8.01286 20.3234 8.48742 20.0303 8.7803L12.5303 16.2803C12.3839 16.4267 12.1919 16.5 12 16.5Z" />
-                                            </svg>
-                                        </button>
-                                        <div class="account__input-select-dropdown">
-                                            <div class="account__input-select-dropdown-inner">
-                                                <ul class="account__input-select-list">
-                                                    <li class="account__input-select-list-item">
-                                                        <label class="account__input-select-option">
-                                                            <input type="radio" name="account-admin" value="Бухгалтерия"
-                                                                class="account__input-select-option-input">
-                                                            <span class="account__input-select-option-mark">
+                                    <div class="account__input-select-wrapper">
+                                        <div class="account__input-select js-select">
+                                            <div class="account__input-select-label">
+                                                Отдел
+                                            </div>
+                                            <button class="account__input-select-btn" type="button"
+                                                data-placeholder="Бухгалтерия">
+                                                <span class="account__input-select-btn-text">
+                                                    Бухгалтерия
+                                                </span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 16.5C11.8082 16.5 11.6162 16.4267 11.4698 16.2803L3.9698 8.7803C3.67673 8.48723 3.67673 8.01267 3.9698 7.7198C4.26286 7.42692 4.73742 7.42673 5.0303 7.7198L12 14.6895L18.9698 7.7198C19.2629 7.42673 19.7374 7.42673 20.0303 7.7198C20.3232 8.01286 20.3234 8.48742 20.0303 8.7803L12.5303 16.2803C12.3839 16.4267 12.1919 16.5 12 16.5Z" />
+                                                </svg>
+                                            </button>
+                                            <div class="account__input-select-dropdown">
+                                                <div class="account__input-select-dropdown-inner">
+                                                    <ul class="account__input-select-list">
+                                                        <li class="account__input-select-list-item">
+                                                            <label class="account__input-select-option">
+                                                                <input type="radio" name="account-admin"
+                                                                    value="Бухгалтерия"
+                                                                    class="account__input-select-option-input">
+                                                                <span class="account__input-select-option-mark">
 
-                                                            </span>
-                                                            <span class="account__input-select-option-text">
-                                                                Бухгалтерия
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="account__input-select-list-item">
-                                                        <label class="account__input-select-option">
-                                                            <input type="radio" name="account-admin"
-                                                                value="Отдел кадров"
-                                                                class="account__input-select-option-input">
-                                                            <span class="account__input-select-option-mark">
+                                                                </span>
+                                                                <span class="account__input-select-option-text">
+                                                                    Бухгалтерия
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="account__input-select-list-item">
+                                                            <label class="account__input-select-option">
+                                                                <input type="radio" name="account-admin"
+                                                                    value="Отдел кадров"
+                                                                    class="account__input-select-option-input">
+                                                                <span class="account__input-select-option-mark">
 
-                                                            </span>
-                                                            <span class="account__input-select-option-text">
-                                                                Отдел кадров
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                </ul>
+                                                                </span>
+                                                                <span class="account__input-select-option-text">
+                                                                    Отдел кадров
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -719,8 +736,8 @@
                                             <span class="account__input-label-text">
                                                 Лимит на заказ
                                             </span>
-                                            <input type="number" class="account__input" name="limit"
-                                                placeholder="10000">
+                                            <input type="text" class="account__input js-numeric-input" name="limit"
+                                                placeholder="10000" inputmode="numeric" data-parsley-type="integer">
                                         </label>
 
                                     </div>

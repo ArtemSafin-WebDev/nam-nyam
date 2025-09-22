@@ -322,12 +322,16 @@
   overflow: hidden;
   text-overflow: ellipsis;
   box-sizing: border-box;
+  transition: border-color 0.2s;
 }
 .account__input::-moz-placeholder {
   color: #6f6f6f;
 }
 .account__input::placeholder {
   color: #6f6f6f;
+}
+.account__input.parsley-error {
+  border-color: red;
 }
 @media screen and (max-width: 767px) {
   .account__input {
@@ -4657,4 +4661,19 @@ textarea.account__rate-field-input {
     order: -30;
     align-self: center;
   }
+}
+
+.parsley-errors-list {
+  display: none;
+}
+
+.parsley-errors-list.filled {
+  display: block;
+  color: red;
+  list-style: none;
+  font-size: 12px;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
 }/*# sourceMappingURL=styles.css.map */

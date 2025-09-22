@@ -324,8 +324,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
   box-sizing: border-box;
+  transition: border-color 0.2s;
   &::placeholder {
     color: #6f6f6f;
+  }
+
+  &.parsley-error {
+    border-color: red;
   }
   @media screen and (max-width: 767px) {
     font-size: 16px;
@@ -4660,4 +4665,19 @@ textarea.account__rate-field-input {
       align-self: center;
     }
   }
+}
+
+.parsley-errors-list {
+  display: none;
+}
+
+.parsley-errors-list.filled {
+  display: block;
+  color: red;
+  list-style: none;
+  font-size: 12px;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
 }
