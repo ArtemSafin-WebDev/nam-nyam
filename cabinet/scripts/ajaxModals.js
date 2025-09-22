@@ -33,13 +33,23 @@ document.addEventListener("DOMContentLoaded", () => {
           window.namNyamApi.initJsForm(jsForm);
         }
 
-        const businessSliders = Array.from(
-          modal.querySelectorAll(".menu__business-slider")
-        );
-        if (businessSliders.length) {
-          businessSliders.forEach((slider) =>
-            window.namNyamApi.initBusinessSlider(slider)
+        const accordions = Array.from(modal.querySelectorAll(".js-accordion"));
+        if (accordions.length) {
+          accordions.forEach((slider) =>
+            window.namNyamApi.initAccordion(slider)
           );
+        }
+        const fileUploads = Array.from(
+          modal.querySelectorAll(".js-file-upload")
+        );
+        if (fileUploads.length) {
+          fileUploads.forEach((slider) =>
+            window.namNyamApi.initFileUpload(slider)
+          );
+        }
+        const selects = Array.from(modal.querySelectorAll(".js-select"));
+        if (selects.length) {
+          selects.forEach((slider) => window.namNyamApi.initSelect(slider));
         }
 
         await new Promise((resolve) => setTimeout(resolve, 200));

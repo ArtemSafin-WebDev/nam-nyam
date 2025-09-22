@@ -120,10 +120,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
         integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"
+        integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/customParseFormat.js"></script>
+    <script>dayjs.extend(window.dayjs_plugin_customParseFormat)</script>
+    <script src="cabinet/scripts/inputmask.js"></script>
+    <script src="cabinet/scripts/masks.js"></script>
+    <script src="cabinet/scripts/validation.js"></script>
+    <script src="cabinet/scripts/form.js"></script>
     <script src="cabinet/scripts/selects.js"></script>
     <script src="cabinet/scripts/modals.js"></script>
     <script src="cabinet/scripts/tableSlider.js"></script>
     <script src="cabinet/scripts/nav.js"></script>
+    <script src="cabinet/scripts/ajaxModals.js"></script>
 </head>
 
 <body class="page">
@@ -209,7 +223,7 @@
                             выйдет предложение по установке нового адреса в отдел!
                         </div>
                         <div class="account__employees-right-wrapper">
-                            <a href="#add-address-modal" class="account__add-btn js-open-modal">
+                            <a href="/9.html" class="account__add-btn js-open-ajax-modal">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
                                     <path
                                         d="M9 2C9.26522 2 9.51957 2.10536 9.70711 2.29289C9.89464 2.48043 10 2.73478 10 3V8H15C15.2652 8 15.5196 8.10536 15.7071 8.29289C15.8946 8.48043 16 8.73478 16 9C16 9.26522 15.8946 9.51957 15.7071 9.70711C15.5196 9.89464 15.2652 10 15 10H10V15C10 15.2652 9.89464 15.5196 9.70711 15.7071C9.51957 15.8946 9.26522 16 9 16C8.73478 16 8.48043 15.8946 8.29289 15.7071C8.10536 15.5196 8 15.2652 8 15V10H3C2.73478 10 2.48043 9.89464 2.29289 9.70711C2.10536 9.51957 2 9.26522 2 9C2 8.73478 2.10536 8.48043 2.29289 8.29289C2.48043 8.10536 2.73478 8 3 8H8V3C8 2.73478 8.10536 2.48043 8.29289 2.29289C8.48043 2.10536 8.73478 2 9 2Z" />
@@ -329,72 +343,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="account__modal js-modal" id="add-address-modal">
-                    <div class="account__modal-inner account__modal-inner--wide">
-                        <button class="account__modal-close js-close-modal">
-                            <svg width="12" height="12" viewBox="0 0 12 12">
-                                <path
-                                    d="M11.4507 0.542631C11.2279 0.319774 10.8679 0.319774 10.645 0.542631L5.99357 5.19406L1.34786 0.548346C1.125 0.325488 0.765 0.325488 0.542143 0.548346C0.319286 0.771203 0.319286 1.1312 0.542143 1.35406L5.18786 5.99977L0.542143 10.6455C0.319286 10.8683 0.319286 11.2283 0.542143 11.4512C0.656429 11.5655 0.799286 11.6169 0.947857 11.6169C1.09643 11.6169 1.23929 11.5598 1.35357 11.4512L5.99357 6.80549L10.6393 11.4512C10.7536 11.5655 10.8964 11.6169 11.045 11.6169C11.1936 11.6169 11.3364 11.5598 11.4507 11.4512C11.6736 11.2283 11.6736 10.8683 11.4507 10.6455L6.79929 5.99977L11.445 1.35406C11.6736 1.1312 11.6736 0.765488 11.4507 0.542631Z" />
-                            </svg>
-                        </button>
-                        <h3 class="account__modal-title">
-                            Новый адрес доставки
-                        </h3>
-                        <div class="account__modal-addresses">
-                            <div class="account__modal-addresses-left">
-                                <div class="account__modal-map-wrapper">
-                                    <iframe
-                                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A7053b99a43973e020f12b2ebdd650053ffde2f33cf01e4b76414b09db836621f&amp;source=constructor"></iframe>
-                                </div>
-                            </div>
-                            <div class="account__modal-addresses-right">
-                                <form action="/" method="POST" class="account__modal-address-form">
 
-                                    <div class="account__modal-address-form-fields">
-                                        <div class="account__modal-address-form-field">
-                                            <div class="account__input-group">
-                                                <label class="account__input-label">
-                                                    <span class="account__input-label-text">
-                                                        Адрес*
-                                                    </span>
-                                                    <input type="text" class="account__input" name="address"
-                                                        placeholder="Укажите адрес или выберите на карте" required="">
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="account__modal-address-form-field">
-                                            <div class="account__input-group">
-                                                <label class="account__input-label">
-                                                    <span class="account__input-label-text">
-                                                        Офис, кв.
-                                                    </span>
-                                                    <input type="text" class="account__input" name="office"
-                                                        placeholder="12" required="">
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="account__modal-address-form-field">
-                                            <div class="account__input-group">
-                                                <label class="account__input-label">
-                                                    <span class="account__input-label-text">
-                                                        Доп. сведения
-                                                    </span>
-                                                    <input type="text" class="account__input" name="extra"
-                                                        placeholder="Например, этаж, домофон и тп.">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="account-button account__modal-employee-submit" type="submit">
-                                        Сохранить
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
 
             </div>
         </section>

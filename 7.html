@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/cabinet/styles/styles.css" />
+</head>
+
+<body class="page">
+    <div class="account__modal js-modal" id="add-department-modal">
+        <div class="account__modal-inner">
+            <button class="account__modal-close js-close-modal">
+                <svg width="12" height="12" viewBox="0 0 12 12">
+                    <path
+                        d="M11.4507 0.542631C11.2279 0.319774 10.8679 0.319774 10.645 0.542631L5.99357 5.19406L1.34786 0.548346C1.125 0.325488 0.765 0.325488 0.542143 0.548346C0.319286 0.771203 0.319286 1.1312 0.542143 1.35406L5.18786 5.99977L0.542143 10.6455C0.319286 10.8683 0.319286 11.2283 0.542143 11.4512C0.656429 11.5655 0.799286 11.6169 0.947857 11.6169C1.09643 11.6169 1.23929 11.5598 1.35357 11.4512L5.99357 6.80549L10.6393 11.4512C10.7536 11.5655 10.8964 11.6169 11.045 11.6169C11.1936 11.6169 11.3364 11.5598 11.4507 11.4512C11.6736 11.2283 11.6736 10.8683 11.4507 10.6455L6.79929 5.99977L11.445 1.35406C11.6736 1.1312 11.6736 0.765488 11.4507 0.542631Z" />
+                </svg>
+            </button>
+            <h3 class="account__modal-title">
+                Новый Отдел
+            </h3>
+
+            <form action="/" method="POST" class="account__modal-employee-form" data-need-validation="">
+
+                <div class="account__modal-employee-form-fields">
+                    <div class="account__modal-employee-form-field">
+                        <div class="account__input-group">
+                            <label class="account__input-label">
+                                <span class="account__input-label-text">
+                                    Название отдела*
+                                </span>
+                                <input type="text" class="account__input" name="department-name"
+                                    placeholder="Отдел снабжения" required="">
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="account__modal-employee-form-field">
+                        <div class="account__input-select-wrapper" id="address-errors">
+                            <div class="account__input-select js-select">
+                                <div class="account__input-select-label">
+                                    Адрес*
+                                </div>
+                                <button class="account__input-select-btn" type="button" data-placeholder="Адрес отдела">
+                                    <span class="account__input-select-btn-text">
+                                        Адрес отдела
+                                    </span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 16.5C11.8082 16.5 11.6162 16.4267 11.4698 16.2803L3.9698 8.7803C3.67673 8.48723 3.67673 8.01267 3.9698 7.7198C4.26286 7.42692 4.73742 7.42673 5.0303 7.7198L12 14.6895L18.9698 7.7198C19.2629 7.42673 19.7374 7.42673 20.0303 7.7198C20.3232 8.01286 20.3234 8.48742 20.0303 8.7803L12.5303 16.2803C12.3839 16.4267 12.1919 16.5 12 16.5Z" />
+                                    </svg>
+                                </button>
+                                <div class="account__input-select-dropdown">
+                                    <div class="account__input-select-dropdown-inner">
+                                        <ul class="account__input-select-list">
+                                            <li class="account__input-select-list-item">
+                                                <label class="account__input-select-option">
+                                                    <input type="radio" name="address" value="Адрес 1"
+                                                        class="account__input-select-option-input" required=""
+                                                        data-parsley-errors-container="#address-errors">
+                                                    <span class="account__input-select-option-mark">
+
+                                                    </span>
+                                                    <span class="account__input-select-option-text">
+                                                        Адрес 1
+                                                    </span>
+                                                </label>
+                                            </li>
+                                            <li class="account__input-select-list-item">
+                                                <label class="account__input-select-option">
+                                                    <input type="radio" name="address" value="Адрес 2"
+                                                        class="account__input-select-option-input" required=""
+                                                        data-parsley-errors-container="#address-errors">
+                                                    <span class="account__input-select-option-mark">
+
+                                                    </span>
+                                                    <span class="account__input-select-option-text">
+                                                        Адрес 2
+                                                    </span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account__modal-employee-form-field">
+                        <div class="account__input-select js-select">
+                            <div class="account__input-select-label">
+                                Желаемое время доставки
+                            </div>
+                            <button class="account__input-select-btn" type="button" data-placeholder="13:30 - 15:00">
+                                <span class="account__input-select-btn-text">
+                                    13:30 - 15:00
+                                </span>
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 16.5C11.8082 16.5 11.6162 16.4267 11.4698 16.2803L3.9698 8.7803C3.67673 8.48723 3.67673 8.01267 3.9698 7.7198C4.26286 7.42692 4.73742 7.42673 5.0303 7.7198L12 14.6895L18.9698 7.7198C19.2629 7.42673 19.7374 7.42673 20.0303 7.7198C20.3232 8.01286 20.3234 8.48742 20.0303 8.7803L12.5303 16.2803C12.3839 16.4267 12.1919 16.5 12 16.5Z" />
+                                </svg>
+                            </button>
+                            <div class="account__input-select-dropdown">
+                                <div class="account__input-select-dropdown-inner">
+                                    <ul class="account__input-select-list">
+                                        <li class="account__input-select-list-item">
+                                            <label class="account__input-select-option">
+                                                <input type="radio" name="delivery-time" value="13:30 - 15:00"
+                                                    class="account__input-select-option-input">
+                                                <span class="account__input-select-option-mark">
+
+                                                </span>
+                                                <span class="account__input-select-option-text">
+                                                    13:30 - 15:00
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="account__input-select-list-item">
+                                            <label class="account__input-select-option">
+                                                <input type="radio" name="delivery-time" value="15:00 - 16:00"
+                                                    class="account__input-select-option-input">
+                                                <span class="account__input-select-option-mark">
+
+                                                </span>
+                                                <span class="account__input-select-option-text">
+                                                    15:00 - 16:00
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account__modal-employee-form-field">
+                        <div class="account__input-group">
+                            <label class="account__input-label">
+                                <span class="account__input-label-text">
+                                    Комментарий
+                                </span>
+                                <input type="text" class="account__input" name="comment"
+                                    placeholder="Текст комментария">
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="account-button account__modal-employee-submit" type="submit">
+                    Сохранить
+                </button>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>

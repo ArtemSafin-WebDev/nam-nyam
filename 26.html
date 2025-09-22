@@ -114,9 +114,22 @@
     <link href="/common/styles/catalog.css?1713902435775" type="text/css" data-template-style="true" rel="stylesheet" />
     <link rel="stylesheet" href="/cabinet/styles/styles.css" />
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"
+        integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/customParseFormat.js"></script>
+    <script>dayjs.extend(window.dayjs_plugin_customParseFormat)</script>
+    <script src="cabinet/scripts/inputmask.js"></script>
+    <script src="cabinet/scripts/masks.js"></script>
+    <script src="cabinet/scripts/validation.js"></script>
+    <script src="cabinet/scripts/form.js"></script>
 
     <script src="cabinet/scripts/selects.js"></script>
     <script src="cabinet/scripts/nav.js"></script>
+    <script src="cabinet/scripts/ajaxModals.js"></script>
 </head>
 
 <body class="page">
@@ -195,7 +208,7 @@
                             </span>
                         </label>
                     </div>
-                    <form action="/" method="POST" class="account__person-settings-form">
+                    <form action="/" method="POST" class="account__person-settings-form" data-need-validation="">
 
                         <div class="account__person-settings-form-top">
                             <div class="account__person-settings-form-fields">
@@ -250,8 +263,8 @@
                                             <span class="account__input-label-text">
                                                 Телефон сотрудника*
                                             </span>
-                                            <input type="tel" class="account__input" name="phone"
-                                                placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ" required="">
+                                            <input type="tel" class="account__input js-phone-input" name="phone"
+                                                placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ" required="" data-parsley-phone="">
                                         </label>
                                     </div>
                                 </div>
@@ -261,8 +274,8 @@
                                             <span class="account__input-label-text">
                                                 Дата рождения
                                             </span>
-                                            <input type="text" class="account__input" name="birthday"
-                                                placeholder="11.01.2000">
+                                            <input type="text" class="account__input js-date-input" name="birthday"
+                                                placeholder="11.01.2000" inputmode="numeric" data-parsley-date="">
                                         </label>
                                     </div>
                                 </div>
@@ -315,7 +328,7 @@
                                                 Новый пароль
                                             </span>
                                             <input type="text" class="account__input" name="password"
-                                                placeholder="*******" required="">
+                                                placeholder="*******" required="" id="password-field">
                                         </label>
                                     </div>
                                 </div>
@@ -327,13 +340,14 @@
                                                 Повторить пароль
                                             </span>
                                             <input type="text" class="account__input" name="password-confirm"
-                                                placeholder="*******" required="">
+                                                placeholder="*******" required=""
+                                                data-parsley-equalto="#password-field">
                                         </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <button class="account-button account__person-settings-submit" type="button">
+                        <button class="account-button account__person-settings-submit" type="submit">
                             Сохранить
                         </button>
                     </form>

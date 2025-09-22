@@ -4047,9 +4047,9 @@ html {
     color: #cbd3d9;
   }
 
-  &:first-child {
-    margin-top: 0;
-  }
+  // &:first-child {
+  //   margin-top: 0;
+  // }
 
   @media screen and (max-width: 1279px) {
     &:first-child {
@@ -4088,8 +4088,13 @@ html {
   border-bottom: 1px solid rgba(#6f6f6f, 0.5);
   width: 100%;
   box-sizing: border-box;
+  transition: border-color 0.2s;
   &::placeholder {
     color: #cbd3d9;
+  }
+
+  &.parsley-error {
+    border-color: red;
   }
 }
 

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const elements = Array.from(document.querySelectorAll(".js-file-upload"));
 
-  elements.forEach((element) => {
+  const initFileUpload = (element) => {
     const input = element.querySelector('input[type="file"]');
     const label = element.querySelector(".js-file-upload-text");
     const clearBtn = element.querySelector(".js-file-upload-clear-btn");
@@ -48,5 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
       clear();
     });
-  });
+  };
+  if (!window.namNyamApi) {
+    window.namNyamApi = {};
+  }
+  window.namNyamApi.initFileUpload = initFileUpload;
+  elements.forEach((element) => initFileUpload(element));
 });

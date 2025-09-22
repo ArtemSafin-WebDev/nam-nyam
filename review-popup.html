@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/cabinet/styles/styles.css" />
+</head>
+
+<body class="page">
+    <div class="account__modal js-modal" id="review-modal">
+        <div class="account__modal-inner account__modal-inner--rate">
+            <button class="account__modal-close js-close-modal">
+                <svg width="12" height="12" viewBox="0 0 12 12">
+                    <path
+                        d="M11.4507 0.542631C11.2279 0.319774 10.8679 0.319774 10.645 0.542631L5.99357 5.19406L1.34786 0.548346C1.125 0.325488 0.765 0.325488 0.542143 0.548346C0.319286 0.771203 0.319286 1.1312 0.542143 1.35406L5.18786 5.99977L0.542143 10.6455C0.319286 10.8683 0.319286 11.2283 0.542143 11.4512C0.656429 11.5655 0.799286 11.6169 0.947857 11.6169C1.09643 11.6169 1.23929 11.5598 1.35357 11.4512L5.99357 6.80549L10.6393 11.4512C10.7536 11.5655 10.8964 11.6169 11.045 11.6169C11.1936 11.6169 11.3364 11.5598 11.4507 11.4512C11.6736 11.2283 11.6736 10.8683 11.4507 10.6455L6.79929 5.99977L11.445 1.35406C11.6736 1.1312 11.6736 0.765488 11.4507 0.542631Z" />
+                </svg>
+            </button>
+            <h3 class="account__modal-title">
+                Отзыв на заказ №123321
+            </h3>
+            <div class="account__rate">
+                <form action="/" method="POST" class="account__rate-form" data-need-validation="">
+                    <div class="account__rate-left">
+                        <div class="account__rate-field">
+                            <label class="account__rate-field-label">
+                                <textarea name="comment" placeholder="Опишите своими словами"
+                                    class="account__rate-field-input" required></textarea>
+                            </label>
+                        </div>
+                        <div class="account__add-media">
+                            <div class="account__add-media-title">
+                                Прикрепить фото:
+                            </div>
+                            <div class="account__add-media-boxes">
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="account__add-media account__add-media--with-border">
+                            <div class="account__add-media-title">
+                                Прикрепить видео:
+                            </div>
+                            <div class="account__add-media-boxes">
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div
+                            class="account__add-media account__add-media--with-border account__add-media--with-bottom-border">
+                            <div class="account__add-media-title">
+                                Прикрепить файл:
+                            </div>
+                            <div class="account__add-media-boxes">
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account__rate-right">
+                        <div class="account__rate-field">
+                            <span class="account__rate-field-label-text">
+                                Автор отзыва:
+                            </span>
+                            <div class="account__input-select js-select">
+                                <button class="account__input-select-btn" type="button"
+                                    data-placeholder="Константин  К.">
+                                    <span class="account__input-select-btn-text">
+                                        Константин К.
+                                    </span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 16.5C11.8082 16.5 11.6162 16.4267 11.4698 16.2803L3.9698 8.7803C3.67673 8.48723 3.67673 8.01267 3.9698 7.7198C4.26286 7.42692 4.73742 7.42673 5.0303 7.7198L12 14.6895L18.9698 7.7198C19.2629 7.42673 19.7374 7.42673 20.0303 7.7198C20.3232 8.01286 20.3234 8.48742 20.0303 8.7803L12.5303 16.2803C12.3839 16.4267 12.1919 16.5 12 16.5Z" />
+                                    </svg>
+                                </button>
+                                <div class="account__input-select-dropdown">
+                                    <div class="account__input-select-dropdown-inner">
+                                        <ul class="account__input-select-list">
+                                            <li class="account__input-select-list-item">
+                                                <label class="account__input-select-option">
+                                                    <input type="radio" name="address" value="Константин  К."
+                                                        class="account__input-select-option-input">
+                                                    <span class="account__input-select-option-mark">
+
+                                                    </span>
+                                                    <span class="account__input-select-option-text">
+                                                        Константин К.
+                                                    </span>
+                                                </label>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account__rate-field">
+                            <label class="account__rate-field-label">
+                                <span class="account__rate-field-label-text">
+                                    E-mail:
+                                </span>
+                                <input type="email" class="account__rate-field-input" placeholder="test@mail.ru"
+                                    name="email" required="">
+                            </label>
+                        </div>
+                        <div class="account__rate-field">
+                            <label class="account__rate-field-label">
+                                <span class="account__rate-field-label-text">
+                                    Телефон:
+                                </span>
+                                <input type="tel" class="account__rate-field-input js-phone-input" placeholder="+7"
+                                    name="phone" data-parsley-phone="">
+                            </label>
+                        </div>
+                        <div class="account__rate-checkboxes">
+                            <label class="account__checkbox">
+                                <input type="radio" name="review-type" value="Положительный"
+                                    class="account__checkbox-input" checked="">
+                                <span class="account__checkbox-mark">
+                                    <svg width="22" height="22" viewBox="0 0 22 22">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                    </svg>
+                                </span>
+                                <div class="account__checkbox-content">
+                                    <span class="account__checkbox-text">
+                                        Положительный
+                                    </span>
+                                    <span class="account__checkbox-remark">
+                                        Стимулирует нас работать с полной отдачей и вдохновением!
+                                    </span>
+                                </div>
+
+                            </label>
+                            <label class="account__checkbox">
+                                <input type="radio" name="review-type" value="Положительный"
+                                    class="account__checkbox-input">
+                                <span class="account__checkbox-mark">
+                                    <svg width="22" height="22" viewBox="0 0 22 22">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                    </svg>
+                                </span>
+                                <div class="account__checkbox-content">
+                                    <span class="account__checkbox-text">
+                                        Отрицательный
+                                    </span>
+                                    <span class="account__checkbox-remark">
+                                        Мы обязательно учтем Ваш отзыв в своей работе!
+                                    </span>
+                                </div>
+
+                            </label>
+                        </div>
+                    </div>
+                    <button class="account-button account__rate-submit" type="submit">
+                        Отправить отзыв
+                    </button>
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

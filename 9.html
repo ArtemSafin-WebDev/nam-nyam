@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/cabinet/styles/styles.css" />
+</head>
+
+<body class="page">
+    <div class="account__modal js-modal" id="add-address-modal">
+        <div class="account__modal-inner account__modal-inner--wide">
+            <button class="account__modal-close js-close-modal">
+                <svg width="12" height="12" viewBox="0 0 12 12">
+                    <path
+                        d="M11.4507 0.542631C11.2279 0.319774 10.8679 0.319774 10.645 0.542631L5.99357 5.19406L1.34786 0.548346C1.125 0.325488 0.765 0.325488 0.542143 0.548346C0.319286 0.771203 0.319286 1.1312 0.542143 1.35406L5.18786 5.99977L0.542143 10.6455C0.319286 10.8683 0.319286 11.2283 0.542143 11.4512C0.656429 11.5655 0.799286 11.6169 0.947857 11.6169C1.09643 11.6169 1.23929 11.5598 1.35357 11.4512L5.99357 6.80549L10.6393 11.4512C10.7536 11.5655 10.8964 11.6169 11.045 11.6169C11.1936 11.6169 11.3364 11.5598 11.4507 11.4512C11.6736 11.2283 11.6736 10.8683 11.4507 10.6455L6.79929 5.99977L11.445 1.35406C11.6736 1.1312 11.6736 0.765488 11.4507 0.542631Z" />
+                </svg>
+            </button>
+            <h3 class="account__modal-title">
+                Новый адрес доставки
+            </h3>
+            <div class="account__modal-addresses">
+                <div class="account__modal-addresses-left">
+                    <div class="account__modal-map-wrapper">
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A7053b99a43973e020f12b2ebdd650053ffde2f33cf01e4b76414b09db836621f&amp;source=constructor"></iframe>
+                    </div>
+                </div>
+                <div class="account__modal-addresses-right">
+                    <form action="/" method="POST" class="account__modal-address-form" data-need-validation="">
+
+                        <div class="account__modal-address-form-fields">
+                            <div class="account__modal-address-form-field">
+                                <div class="account__input-group">
+                                    <label class="account__input-label">
+                                        <span class="account__input-label-text">
+                                            Адрес*
+                                        </span>
+                                        <input type="text" class="account__input" name="address"
+                                            placeholder="Укажите адрес или выберите на карте" required="">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="account__modal-address-form-field">
+                                <div class="account__input-group">
+                                    <label class="account__input-label">
+                                        <span class="account__input-label-text">
+                                            Офис, кв.
+                                        </span>
+                                        <input type="text" class="account__input" name="office" placeholder="12"
+                                            required="">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="account__modal-address-form-field">
+                                <div class="account__input-group">
+                                    <label class="account__input-label">
+                                        <span class="account__input-label-text">
+                                            Доп. сведения
+                                        </span>
+                                        <input type="text" class="account__input" name="extra"
+                                            placeholder="Например, этаж, домофон и тп.">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="account-button account__modal-employee-submit" type="submit">
+                            Сохранить
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

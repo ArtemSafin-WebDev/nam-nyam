@@ -120,11 +120,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
         integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"
+        integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/customParseFormat.js"></script>
+    <script>dayjs.extend(window.dayjs_plugin_customParseFormat)</script>
+    <script src="cabinet/scripts/inputmask.js"></script>
+    <script src="cabinet/scripts/masks.js"></script>
+    <script src="cabinet/scripts/validation.js"></script>
+    <script src="cabinet/scripts/form.js"></script>
+
     <script src="cabinet/scripts/selects.js"></script>
     <script src="cabinet/scripts/modals.js"></script>
     <script src="cabinet/scripts/tableSlider.js"></script>
     <script src="cabinet/scripts/accordions.js"></script>
     <script src="cabinet/scripts/nav.js"></script>
+    <script src="cabinet/scripts/ajaxModals.js"></script>
 </head>
 
 <body class="page">
@@ -1613,7 +1627,7 @@
                     </div>
                     <div class="account__rated-sidebar">
                         <div class="account__rated-sidebar-inner">
-                            <form action="/" method="POST" class="account__rated-sidebar-form">
+                            <form action="/" method="POST" class="account__rated-sidebar-form" data-need-validation="">
                                 <div class="account__rated-sidebar-form-title">
                                     Оценить заказ № 131525
                                 </div>

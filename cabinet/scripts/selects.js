@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const selects = Array.from(document.querySelectorAll(".js-select"));
-  selects.forEach((select) => {
+
+  const initSelect = (select) => {
     const button = select.querySelector("button");
     const buttonText = button.querySelector("span:first-child");
     const placeholder = button.getAttribute("data-placeholder");
@@ -33,5 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (select.contains(event.target)) return;
       select.classList.remove("active");
     });
+  };
+
+  if (!window.namNyamApi) {
+    window.namNyamApi = {};
+  }
+  window.namNyamApi.initSelect = initSelect;
+  selects.forEach((select) => {
+    initSelect(select);
   });
 });

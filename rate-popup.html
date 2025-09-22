@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/cabinet/styles/styles.css" />
+</head>
+
+<body class="page">
+    <div class="account__modal js-modal" id="rate-modal">
+        <div class="account__modal-inner account__modal-inner--rate">
+            <button class="account__modal-close js-close-modal">
+                <svg width="12" height="12" viewBox="0 0 12 12">
+                    <path
+                        d="M11.4507 0.542631C11.2279 0.319774 10.8679 0.319774 10.645 0.542631L5.99357 5.19406L1.34786 0.548346C1.125 0.325488 0.765 0.325488 0.542143 0.548346C0.319286 0.771203 0.319286 1.1312 0.542143 1.35406L5.18786 5.99977L0.542143 10.6455C0.319286 10.8683 0.319286 11.2283 0.542143 11.4512C0.656429 11.5655 0.799286 11.6169 0.947857 11.6169C1.09643 11.6169 1.23929 11.5598 1.35357 11.4512L5.99357 6.80549L10.6393 11.4512C10.7536 11.5655 10.8964 11.6169 11.045 11.6169C11.1936 11.6169 11.3364 11.5598 11.4507 11.4512C11.6736 11.2283 11.6736 10.8683 11.4507 10.6455L6.79929 5.99977L11.445 1.35406C11.6736 1.1312 11.6736 0.765488 11.4507 0.542631Z" />
+                </svg>
+            </button>
+            <h3 class="account__modal-title">
+                Оценить заказ №&nbsp;131525
+            </h3>
+            <div class="account__rate">
+                <form action="/" method="POST" class="account__rate-form" data-need-validation="">
+                    <div class="account__rate-left">
+                        <div class="account__rate-stars">
+                            <div class="account__rate-stars-title">
+                                Общее впечатление:
+                            </div>
+                            <div class="account__rate-stars-row">
+                                <input type="radio" name="score" value="1" class="account__rate-stars-input"
+                                    id="star-1">
+                                <input type="radio" name="score" value="2" class="account__rate-stars-input"
+                                    id="star-2">
+                                <input type="radio" name="score" value="3" class="account__rate-stars-input" id="star-3"
+                                    checked>
+                                <input type="radio" name="score" value="4" class="account__rate-stars-input"
+                                    id="star-4">
+                                <input type="radio" name="score" value="5" class="account__rate-stars-input"
+                                    id="star-5">
+                                <div class="account__rate-stars-labels">
+                                    <label class="account__rate-star-label" for="star-1">
+                                        <svg width="30" height="28" viewBox="0 0 30 28">
+                                            <path
+                                                d="M15 0L20.0344 8.07077L29.2658 10.3647L23.1458 17.6467L23.8168 27.1353L15 23.565L6.18322 27.1353L6.8542 17.6467L0.734152 10.3647L9.96562 8.07077L15 0Z" />
+                                        </svg>
+                                    </label>
+                                    <label class="account__rate-star-label" for="star-2">
+                                        <svg width="30" height="28" viewBox="0 0 30 28">
+                                            <path
+                                                d="M15 0L20.0344 8.07077L29.2658 10.3647L23.1458 17.6467L23.8168 27.1353L15 23.565L6.18322 27.1353L6.8542 17.6467L0.734152 10.3647L9.96562 8.07077L15 0Z" />
+                                        </svg>
+                                    </label>
+                                    <label class="account__rate-star-label" for="star-3">
+                                        <svg width="30" height="28" viewBox="0 0 30 28">
+                                            <path
+                                                d="M15 0L20.0344 8.07077L29.2658 10.3647L23.1458 17.6467L23.8168 27.1353L15 23.565L6.18322 27.1353L6.8542 17.6467L0.734152 10.3647L9.96562 8.07077L15 0Z" />
+                                        </svg>
+                                    </label>
+                                    <label class="account__rate-star-label" for="star-4">
+                                        <svg width="30" height="28" viewBox="0 0 30 28">
+                                            <path
+                                                d="M15 0L20.0344 8.07077L29.2658 10.3647L23.1458 17.6467L23.8168 27.1353L15 23.565L6.18322 27.1353L6.8542 17.6467L0.734152 10.3647L9.96562 8.07077L15 0Z" />
+                                        </svg>
+                                    </label>
+                                    <label class="account__rate-star-label" for="star-5">
+                                        <svg width="30" height="28" viewBox="0 0 30 28">
+                                            <path
+                                                d="M15 0L20.0344 8.07077L29.2658 10.3647L23.1458 17.6467L23.8168 27.1353L15 23.565L6.18322 27.1353L6.8542 17.6467L0.734152 10.3647L9.96562 8.07077L15 0Z" />
+                                        </svg>
+                                    </label>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="account__rate-checkboxes-groups">
+
+
+                            <div class="account__rate-checkboxes-group open js-accordion">
+                                <div class="account__rate-checkboxes-group-title js-accordion-btn">
+                                    Что понравилось:
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                                        <path
+                                            d="M7.99902 0.5C8.29644 0.5 8.59082 0.619727 8.81055 0.849609L15.1738 7.5166C15.6071 7.97025 15.607 8.69591 15.1748 9.14941C14.7292 9.61642 13.9963 9.61618 13.5508 9.14941L7.99902 3.33301L2.44727 9.14941C2.00167 9.61646 1.26963 9.61633 0.824219 9.15039C0.3912 8.69676 0.391332 7.97016 0.824219 7.5166L7.1875 0.849609C7.40717 0.619625 7.7016 0.500096 7.99902 0.5Z" />
+                                    </svg>
+                                </div>
+                                <div class="account__rate-checkboxes-group-dropdown">
+                                    <div class="account__rate-checkboxes-group-dropdown-inner">
+                                        <ul class="account__rate-checkboxes-group-list">
+                                            <li class="account__rate-checkboxes-group-list-item">
+                                                <label class="account__checkbox account__checkbox--small">
+                                                    <input type="checkbox" name="what-is-good" value="Доставка"
+                                                        class="account__checkbox-input" checked="">
+                                                    <span class="account__checkbox-mark">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="account__checkbox-text">
+                                                        Доставка
+                                                    </span>
+
+                                                </label>
+                                            </li>
+                                            <li class="account__rate-checkboxes-group-list-item">
+                                                <label class="account__checkbox account__checkbox--small">
+                                                    <input type="checkbox" name="what-is-good" value="Вкус"
+                                                        class="account__checkbox-input" checked="">
+                                                    <span class="account__checkbox-mark">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="account__checkbox-text">
+                                                        Вкус
+                                                    </span>
+
+                                                </label>
+                                            </li>
+                                            <li class="account__rate-checkboxes-group-list-item">
+                                                <label class="account__checkbox account__checkbox--small">
+                                                    <input type="checkbox" name="what-is-good" value="Упаковка"
+                                                        class="account__checkbox-input">
+                                                    <span class="account__checkbox-mark">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="account__checkbox-text">
+                                                        Упаковка
+                                                    </span>
+
+                                                </label>
+                                            </li>
+                                            <li class="account__rate-checkboxes-group-list-item">
+                                                <label class="account__checkbox account__checkbox--small">
+                                                    <input type="checkbox" name="what-is-good" value="Качество"
+                                                        class="account__checkbox-input">
+                                                    <span class="account__checkbox-mark">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="account__checkbox-text">
+                                                        Качество
+                                                    </span>
+
+                                                </label>
+                                            </li>
+                                            <li class="account__rate-checkboxes-group-list-item">
+                                                <label class="account__checkbox account__checkbox--small">
+                                                    <input type="checkbox" name="what-is-good" value="Внешний вид"
+                                                        class="account__checkbox-input">
+                                                    <span class="account__checkbox-mark">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="account__checkbox-text">
+                                                        Внешний вид
+                                                    </span>
+
+                                                </label>
+                                            </li>
+                                            <li class="account__rate-checkboxes-group-list-item">
+                                                <label class="account__checkbox account__checkbox--small">
+                                                    <input type="checkbox" name="what-is-good" value="Работа с сайтом"
+                                                        class="account__checkbox-input">
+                                                    <span class="account__checkbox-mark">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="account__checkbox-text">
+                                                        Работа с сайтом
+                                                    </span>
+
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="account__rate-checkboxes-group open js-accordion">
+                                <div class="account__rate-checkboxes-group-title js-accordion-btn">
+                                    Что не так:
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                                        <path
+                                            d="M7.99902 0.5C8.29644 0.5 8.59082 0.619727 8.81055 0.849609L15.1738 7.5166C15.6071 7.97025 15.607 8.69591 15.1748 9.14941C14.7292 9.61642 13.9963 9.61618 13.5508 9.14941L7.99902 3.33301L2.44727 9.14941C2.00167 9.61646 1.26963 9.61633 0.824219 9.15039C0.3912 8.69676 0.391332 7.97016 0.824219 7.5166L7.1875 0.849609C7.40717 0.619625 7.7016 0.500096 7.99902 0.5Z" />
+                                    </svg>
+                                </div>
+                                <div class="account__rate-checkboxes-group-dropdown">
+                                    <div class="account__rate-checkboxes-group-dropdown-inner">
+                                        <ul class="account__rate-checkboxes-group-list">
+                                            <li class="account__rate-checkboxes-group-list-item">
+                                                <label class="account__checkbox account__checkbox--small">
+                                                    <input type="checkbox" name="what-is-bad" value="Доставка"
+                                                        class="account__checkbox-input">
+                                                    <span class="account__checkbox-mark">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="account__checkbox-text">
+                                                        Доставка
+                                                    </span>
+
+                                                </label>
+                                            </li>
+                                            <li class="account__rate-checkboxes-group-list-item">
+                                                <label class="account__checkbox account__checkbox--small">
+                                                    <input type="checkbox" name="what-is-bad" value="Вкус"
+                                                        class="account__checkbox-input">
+                                                    <span class="account__checkbox-mark">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="account__checkbox-text">
+                                                        Вкус
+                                                    </span>
+
+                                                </label>
+                                            </li>
+                                            <li class="account__rate-checkboxes-group-list-item">
+                                                <label class="account__checkbox account__checkbox--small">
+                                                    <input type="checkbox" name="what-is-bad" value="Упаковка"
+                                                        class="account__checkbox-input">
+                                                    <span class="account__checkbox-mark">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="account__checkbox-text">
+                                                        Упаковка
+                                                    </span>
+
+                                                </label>
+                                            </li>
+                                            <li class="account__rate-checkboxes-group-list-item">
+                                                <label class="account__checkbox account__checkbox--small">
+                                                    <input type="checkbox" name="what-is-bad" value="Качество"
+                                                        class="account__checkbox-input">
+                                                    <span class="account__checkbox-mark">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="account__checkbox-text">
+                                                        Качество
+                                                    </span>
+
+                                                </label>
+                                            </li>
+                                            <li class="account__rate-checkboxes-group-list-item">
+                                                <label class="account__checkbox account__checkbox--small">
+                                                    <input type="checkbox" name="what-is-bad" value="Внешний вид"
+                                                        class="account__checkbox-input">
+                                                    <span class="account__checkbox-mark">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="account__checkbox-text">
+                                                        Внешний вид
+                                                    </span>
+
+                                                </label>
+                                            </li>
+                                            <li class="account__rate-checkboxes-group-list-item">
+                                                <label class="account__checkbox account__checkbox--small">
+                                                    <input type="checkbox" name="what-is-bad" value="Работа с сайтом"
+                                                        class="account__checkbox-input">
+                                                    <span class="account__checkbox-mark">
+                                                        <svg width="22" height="22" viewBox="0 0 22 22">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="account__checkbox-text">
+                                                        Работа с сайтом
+                                                    </span>
+
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account__rate-right">
+                        <div class="account__rate-field">
+                            <label class="account__rate-field-label">
+                                <span class="account__rate-field-label-text">
+                                    Комментарий к заказу:
+                                </span>
+                                <input type="text" class="account__rate-field-input" placeholder="Текст комментария"
+                                    name="comment">
+                            </label>
+                        </div>
+                        <div class="account__add-media">
+                            <div class="account__add-media-title">
+                                Прикрепить фото:
+                            </div>
+                            <div class="account__add-media-boxes">
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="account__add-media account__add-media--with-border">
+                            <div class="account__add-media-title">
+                                Прикрепить видео:
+                            </div>
+                            <div class="account__add-media-boxes">
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label class="account__add-media-box js-file-upload">
+                                    <input type="file" class="account__add-media-box-input">
+                                    <span class="account__add-media-box-checkmark">
+                                        <span>
+                                            +
+                                        </span>
+                                        <span>
+                                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17 8.37507L9.62819 15.5L5 11.0268L6.94004 9.15174L9.62819 11.7499L15.06 6.5L17 8.37507Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="account-button account__rate-submit" type="submit">
+                        Сохранить
+                    </button>
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
