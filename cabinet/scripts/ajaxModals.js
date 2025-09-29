@@ -51,6 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (selects.length) {
           selects.forEach((slider) => window.namNyamApi.initSelect(slider));
         }
+        const formsWithMap = Array.from(modal.querySelectorAll(".js-form-with-map"));
+        if (formsWithMap.length) {
+          formsWithMap.forEach((form) => window.namNyamApi.initMapForElement(form));
+        }
 
         await new Promise((resolve) => setTimeout(resolve, 200));
         Array.from(document.querySelectorAll(".js-modal")).forEach(

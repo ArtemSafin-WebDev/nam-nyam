@@ -299,7 +299,7 @@
                                                         г. Москва, Ставропольский проспект, д. 11, корп. 1
                                                     </div>
                                                 </div>
-                                                <div class="account__table-cell" data-title="Оценка">
+                                                <div class="account__table-cell">
                                                     <div class="account__table-cell-content">
                                                         <a href="/report-modal.html"
                                                             class="account-green-outline-btn js-open-ajax-modal">
@@ -343,11 +343,17 @@
                                                         г. Москва, Ставропольский проспект, д. 11, корп. 1
                                                     </div>
                                                 </div>
-                                                <div class="account__table-cell" data-title="Оценка">
+                                                <div class="account__table-cell" data-title="Отзыв отправлен">
                                                     <div class="account__table-cell-content">
                                                         <a href="#"
                                                             class="account-green-outline-btn account-green-outline-btn--disabled">
-                                                            Оценено
+                                                            <span class="account-green-outline-btn-text">
+                                                                Оценено
+                                                            </span>
+                                                            <svg width="16" height="12" viewBox="0 0 16 12">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M16 2.50009L6.17092 12L0 6.03575L2.58672 3.53566L6.17092 6.99982L13.4133 0L16 2.50009Z" />
+                                                            </svg>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -387,7 +393,7 @@
                                                         г. Москва, Ставропольский проспект, д. 11, корп. 1
                                                     </div>
                                                 </div>
-                                                <div class="account__table-cell" data-title="Оценка">
+                                                <div class="account__table-cell">
                                                     <div class="account__table-cell-content">
                                                         <a href="/report-modal.html"
                                                             class="account-green-outline-btn js-open-ajax-modal">
@@ -431,7 +437,7 @@
                                                         г. Москва, Ставропольский проспект, д. 11, корп. 1
                                                     </div>
                                                 </div>
-                                                <div class="account__table-cell" data-title="Оценка">
+                                                <div class="account__table-cell">
                                                     <div class="account__table-cell-content">
                                                         <a href="/report-modal.html"
                                                             class="account-green-outline-btn js-open-ajax-modal">
@@ -452,6 +458,38 @@
                     </div>
                 </div>
 
+            </div>
+            <div class="account__modal js-modal" id="success-modal">
+                <div class="account__modal-inner">
+                    <button class="account__modal-close js-close-modal">
+                        <svg width="12" height="12" viewBox="0 0 12 12">
+                            <path
+                                d="M11.4507 0.542631C11.2279 0.319774 10.8679 0.319774 10.645 0.542631L5.99357 5.19406L1.34786 0.548346C1.125 0.325488 0.765 0.325488 0.542143 0.548346C0.319286 0.771203 0.319286 1.1312 0.542143 1.35406L5.18786 5.99977L0.542143 10.6455C0.319286 10.8683 0.319286 11.2283 0.542143 11.4512C0.656429 11.5655 0.799286 11.6169 0.947857 11.6169C1.09643 11.6169 1.23929 11.5598 1.35357 11.4512L5.99357 6.80549L10.6393 11.4512C10.7536 11.5655 10.8964 11.6169 11.045 11.6169C11.1936 11.6169 11.3364 11.5598 11.4507 11.4512C11.6736 11.2283 11.6736 10.8683 11.4507 10.6455L6.79929 5.99977L11.445 1.35406C11.6736 1.1312 11.6736 0.765488 11.4507 0.542631Z" />
+                        </svg>
+                    </button>
+                    <h3 class="account__modal-title">
+                        Форма успешно отправлена
+                    </h3>
+                    <button class="account-button account__modal-message-modal-btn js-close-modal" type="button">
+                        Закрыть
+                    </button>
+                </div>
+            </div>
+            <div class="account__modal js-modal" id="error-modal">
+                <div class="account__modal-inner">
+                    <button class="account__modal-close js-close-modal">
+                        <svg width="12" height="12" viewBox="0 0 12 12">
+                            <path
+                                d="M11.4507 0.542631C11.2279 0.319774 10.8679 0.319774 10.645 0.542631L5.99357 5.19406L1.34786 0.548346C1.125 0.325488 0.765 0.325488 0.542143 0.548346C0.319286 0.771203 0.319286 1.1312 0.542143 1.35406L5.18786 5.99977L0.542143 10.6455C0.319286 10.8683 0.319286 11.2283 0.542143 11.4512C0.656429 11.5655 0.799286 11.6169 0.947857 11.6169C1.09643 11.6169 1.23929 11.5598 1.35357 11.4512L5.99357 6.80549L10.6393 11.4512C10.7536 11.5655 10.8964 11.6169 11.045 11.6169C11.1936 11.6169 11.3364 11.5598 11.4507 11.4512C11.6736 11.2283 11.6736 10.8683 11.4507 10.6455L6.79929 5.99977L11.445 1.35406C11.6736 1.1312 11.6736 0.765488 11.4507 0.542631Z" />
+                        </svg>
+                    </button>
+                    <h3 class="account__modal-title">
+                        Произошла ошибка, попробуйте позже
+                    </h3>
+                    <button class="account-button account__modal-message-modal-btn js-close-modal" type="button">
+                        Закрыть
+                    </button>
+                </div>
             </div>
         </section>
     </main>

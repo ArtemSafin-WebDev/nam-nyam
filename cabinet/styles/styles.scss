@@ -494,7 +494,7 @@
     font-weight: 400;
     line-height: 120%;
     text-transform: uppercase;
-    padding: 19px 18px;
+    padding: 19px 34px;
     padding-bottom: 17px;
   }
 }
@@ -1261,7 +1261,10 @@
     }
 
     @media screen and (max-width: 1024px) {
-      width: 1200px;
+      width: 900px;
+    }
+    @media screen and (max-width: 768px) {
+      width: 754px;
     }
 
     @media screen and (max-width: 767px) {
@@ -2417,7 +2420,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
-  padding: 10px 10px;
+  padding: 9px 20px;
   border-radius: 8px;
   border: 1px solid #79c500;
   background: white;
@@ -2438,6 +2441,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: white;
   }
 
+  svg {
+    display: none;
+    fill: var(--accent-color);
+    flex-shrink: 0;
+    width: 16px;
+    height: 12px;
+  }
+
   &--disabled {
     border-color: #cbd3d9;
     background: #f3f6f8;
@@ -2454,6 +2465,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: auto;
     padding-left: 20px;
     padding-right: 20px;
+
+    .account__table-cell & {
+      width: 140px;
+    }
+
+    .account__table-cell &--disabled {
+      border: none;
+      padding: 0;
+      margin: 0;
+      background: transparent;
+      border-radius: 0;
+      display: block;
+      margin-top: 6px;
+
+      .account-green-outline-btn-text {
+        display: none;
+      }
+
+      svg {
+        display: block;
+      }
+    }
   }
 }
 
@@ -2462,7 +2495,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
-  padding: 10px 10px;
+  padding: 9px 20px;
   border-radius: 8px;
   border: 1px solid #f9aa00;
   background-color: #f9aa00;
@@ -2481,6 +2514,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: auto;
     padding-left: 30px;
     padding-right: 30px;
+
+    .account__table-cell & {
+      width: 140px;
+    }
   }
 }
 .account-green-btn {
@@ -2641,6 +2678,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-weight: 400;
     line-height: 140%;
     margin-bottom: 10px;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
 
     &--centered-on-mobile {
       margin-bottom: 0;
@@ -2826,9 +2868,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     line-height: 120%;
     text-decoration-line: underline;
     text-decoration-style: dotted;
-    // text-decoration-skip-ink: none;
-    text-decoration-thickness: auto;
-    text-underline-offset: 1px;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
     padding: 0;
     margin: 0;
     border: none;
@@ -2960,6 +3002,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   @media screen and (max-width: 1279px) {
     padding: 6px 0;
     break-inside: avoid;
+
+    &:nth-child(5):last-child {
+      padding-bottom: 50px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &:nth-child(5):last-child {
+      padding-bottom: 6px;
+    }
   }
 }
 
@@ -3473,6 +3525,10 @@ html {
 }
 .account__excel-top {
   margin-bottom: 30px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
 }
 
 .account__excel-top-wrapper {
@@ -3623,6 +3679,10 @@ html {
     font-weight: 350;
     line-height: 120%;
     margin-top: 16px;
+
+    &--large-mobile-margin {
+      margin-top: 30px;
+    }
   }
 
   b {
@@ -3632,6 +3692,10 @@ html {
 
 .accout__excel-checkbox {
   margin-top: 32px;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 25px;
+  }
 }
 
 .account__excel-files-formats {

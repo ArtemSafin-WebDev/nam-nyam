@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
             Array.from(document.querySelectorAll(".js-modal")).forEach(
               (modal) => modal.classList.remove("active")
             );
+            const modalCloseEvent = new CustomEvent("modalclose");
+            document.dispatchEvent(modalCloseEvent);
             const successModal = document.querySelector("#success-modal");
             successModal.classList.add("active");
             document.body.classList.add("modal-open");
@@ -30,6 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
             Array.from(document.querySelectorAll(".js-modal")).forEach(
               (modal) => modal.classList.remove("active")
             );
+            const modalCloseEvent = new CustomEvent("modalclose");
+            document.dispatchEvent(modalCloseEvent);
             const errorModal = document.querySelector("#error-modal");
             errorModal.classList.add("active");
             document.body.classList.add("modal-open");

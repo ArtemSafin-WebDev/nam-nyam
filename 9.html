@@ -20,11 +20,10 @@
             <h3 class="account__modal-title">
                 Новый адрес доставки
             </h3>
-            <div class="account__modal-addresses">
+            <div class="account__modal-addresses js-form-with-map">
                 <div class="account__modal-addresses-left">
                     <div class="account__modal-map-wrapper">
-                        <iframe
-                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A7053b99a43973e020f12b2ebdd650053ffde2f33cf01e4b76414b09db836621f&amp;source=constructor"></iframe>
+                        <div class="js-map-element" style="width: 100%; height: 100%;"></div>
                     </div>
                 </div>
                 <div class="account__modal-addresses-right">
@@ -37,7 +36,7 @@
                                         <span class="account__input-label-text">
                                             Адрес*
                                         </span>
-                                        <input type="text" class="account__input" name="address"
+                                        <input type="text" class="account__input js-address-input" name="address"
                                             placeholder="Укажите адрес или выберите на карте" required="">
                                     </label>
                                 </div>
@@ -48,8 +47,7 @@
                                         <span class="account__input-label-text">
                                             Офис, кв.
                                         </span>
-                                        <input type="text" class="account__input" name="office" placeholder="12"
-                                            required="">
+                                        <input type="text" class="account__input" name="office" placeholder="12">
                                     </label>
                                 </div>
                             </div>
@@ -75,6 +73,8 @@
 
         </div>
     </div>
+
+   
 </body>
 
 </html>
